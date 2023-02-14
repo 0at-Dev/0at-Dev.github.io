@@ -1,0 +1,260 @@
+<!doctype html >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+  <title>Oscar Tenias | Front-End Developer</title>
+</head>
+<body>
+  <header class="w-full h-0 flex relative z-20">
+      <input class="peer hidden" type="checkbox" name="MobileNav" id="MobileNav">
+
+      <!-- Main Nav -->
+      <nav class="bg-white/10 fixed h-[100vh] -right-[100%] peer-checked:right-[0%] transition-[right] duration-200 ease-in-out desktop:backdrop-blur-lg desktop:w-fit desktop:h-fit desktop:my-[2vh]  desktop:right-[2%] desktop:rounded-full ">
+          <ul class="flex flex-col py-1 px-2 desktop:flex-row">
+              
+            <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2 ">
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out hover:bg-white/20 desktop:rounded-full " href="#">Home</a>
+            </li>
+            <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out hover:bg-white/20 desktop:rounded-full " href="#Skills">Skills</a>
+            </li>
+            <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out hover:bg-white/20 desktop:rounded-full " href="#About">About</a>
+            </li>
+            <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out hover:bg-white/20 desktop:rounded-full " href="#Work">Work</a>
+            </li>
+            <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
+              <input class="peer hidden" type="checkbox" name="DarkMode" id="DarkMode">
+
+              <label class="py-1 px-2 transition-[background-color] duration-200 ease-in-out peer-checked:bg-white/30 hover:hover:bg-white/20 desktop:rounded-full desktop:cursor-pointer" for="DarkMode">🌙</label>
+            </li>
+
+          </ul>
+      </nav>
+
+      <!-- Contact nav -->
+      <nav class="fixed h-[100vh] -left-[100%] peer-checked:left-[0%] transition-[left] duration-200 ease-in-out desktop:w-fit desktop:h-fit desktop:my-[2vh]  desktop:left-[2%]">
+        <ul class="flex flex-col py-1 px-2 desktop:flex-row">
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-github bg-no-repeat bg-center bg-contain" href="#">
+            </a>
+          </li>
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-linkedin bg-no-repeat bg-center bg-contain" href="#">
+              
+            </a>
+          </li>
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-mail bg-no-repeat bg-center bg-contain" href="#">
+              
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Open nav  -->
+      <label class="w-[3em] h-[3em] flex items-center  justify-center rounded-full bg-white/10
+      backdrop-blur-lg fixed my-[2vh] right-[2%]  peer-checked:opacity-0 peer-checked:pointer-events-none transition-[opacity] duration-200 ease-in-out  desktop:hidden" for="MobileNav">
+        <svg class="w-[1.5em] h-[1.5em] fill-light " xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </label>
+
+      <!-- Close nav -->
+      <label class="opacity-0 pointer-events-none w-[3em] h-[3em] flex items-center  justify-center rounded-full bg-white/10 backdrop-blur-lg fixed my-[2vh] right-[2%] peer-checked:right-[30%] peer-checked:opacity-100 peer-checked:pointer-events-auto transition-[right,opacity] duration-200 ease-in-out  desktop:hidden" for="MobileNav">
+        <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+        </svg>
+      </label>
+
+  </header>
+  <main class="w-full min-h-[85vh]">
+ 
+    <!-- Introduction  -->
+      <section id="Introduction" class="w-full h-screen mx-auto py-12 flex flex-col content-center items-center place-content-center relative ">
+           <h1 class="text-[3em] text-dark text-center font-inter font-bold h-fit my-1 desktop:w-[90%]">
+              Oscar Tenias
+          </h1>
+          <h2 class="text-[1.2rem] text-dark text-center font-inter font-light h-fit my-1 desktop:w-[40%]">
+            Front-End Developer
+          </h2>
+
+          <a class="w-[3em] h-[3em] flex items-center justify-center rounded-full bg-dark absolute bottom-10 left-10  animate-bounce" href="#About">
+            <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+          </a>
+      </section>
+
+      <section id="Skills" class="bg-dark w-full h-fit mx-auto py-3 flex flex-col content-center items-center place-content-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light ">
+          <div class="w-[98%] h-fit flex flex-col items-center justify-center desktop:flex-row">
+              <ul class="w-full h-fit flex flex-col desktop:flex-row desktop:w-fit">
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['HTML'] ">
+                  HTML
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['CSS'] ">
+                  CSS
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['JAVASCRIPT'] ">
+                  JAVASCRIPT
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['REACT'] ">
+                  REACT
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['TAILWINDCSS'] ">
+                  TAILWINDCSS
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['WEBFLOW'] ">
+                  WEBFLOW
+                </li>
+                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['GIT'] ">
+                  GIT
+                </li>
+              </ul>
+          </div>
+      </section>
+
+      <section id="About" class="bg-dark w-full h-fit mx-auto flex flex-col items-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light desktop:h-screen">
+
+        <div class="w-[98%] h-fit flex flex-col my-4 py-[3.5em] desktop:mt-[2rem] ">
+
+          <h2 class="text-[1.5em] text-light text-center font-inter font-medium h-fit my-4 w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:ml-[10%] desktop:mr-auto desktop:w-[60%]  ">
+            About me
+          </h2>
+
+          <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
+          w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%]  desktop:ml-[10%] desktop:mr-auto">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum pariatur voluptas quam veritatis in commodi ea, est sapiente ducimus voluptatibus molestias accusantium quasi earum labore voluptates numquam, odio, aliquid corrupti.
+          </p>
+
+        </div>
+
+        <a class="w-[3em] h-[3em] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg  absolute bottom-4 right-10  animate-bounce" href="#Work">
+          <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+        </a>
+        
+      </section>
+
+      <section id="Work" class="bg-dark w-full h-screen mx-auto py-3 flex flex-col items-center relative">
+
+        <div class="w-[98%] h-[95%] flex flex-col justify-around my-4 py-[1em] desktop:mt-[2rem] ">
+            <h2 class="text-[1.5em] text-light text-center font-inter font-medium h-fit my-4 w-[90%] mx-auto desktop:w-[60%] ">
+              My Work
+            </h2>
+
+          <!-- Wrapper -->
+            <div class="w-full h-[70%] flex flex-col relative desktop:w-[80%] desktop:m-auto">
+
+              <!-- wrapper de slides -->
+                <div class="w-full h-full absolute inset-0">
+                    <!-- Slide -->
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-100 transition-opacity duration-200 ease-in-out">
+
+                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
+                        <span class="font-nunito font-extralight text-[.9rem]">Titulo del proyecto</span>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestiae, consequatur doloribus veniam aut incidunt culpa magni labore neque quisquam excepturi voluptatum mollitia optio praesentium, tempora odio, hic deserunt eaque!
+                      </p>
+
+                      <span class="my-2 w-[90%] text-light font-nunito font-extralight text-[.9rem]">1/3</span>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 transition-opacity duration-200 ease-in-out">
+
+                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
+                        <span class="font-nunito font-extralight text-[.9rem]">Titulo del proyecto 2</span>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi molestiae, consequatur doloribus veniam aut incidunt culpa magni labore neque quisquam excepturi voluptatum mollitia optio praesentium, tempocleara odio, hic deserunt eaque!
+                      </p>
+
+                      <span class="my-2 w-[90%] text-light font-nunito font-extralight text-[.9rem]">1/3</span>
+                    </div>
+
+                </div>
+
+              <!-- wrapper de botones -->
+                <div class="w-fit h-fit flex absolute bottom-0 right-0">
+                  <!-- Prev -->
+                  <button id="PrevSlide" class="mx-2 w-[3em] h-[3em] flex items-center justify-center rounded-full bg-transparent rotate-90 ">
+                    <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                  </button>
+                  <!-- Next -->
+                  <button id="NextSlide" class="mx-2 w-[3em] h-[3em] flex items-center justify-center rounded-full bg-transparent -rotate-90 ">
+                    <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                  </button>
+                </div>
+            </div>    
+        </div>
+
+      </section>
+
+      
+  </main>
+  <footer class="w-full h-[28vh]flex desktop:h-[15vh]">
+      <div class="bg-dark w-full h-full m-auto flex items-end justify-center">
+          <ul class=" mb-4 flex ">
+
+            <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-white/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+              <a class="group w-full h-full flex relative" href="#">
+                <span class="w-full h-full opacity-20 rounded-lg bg-white/10 backdrop-blur-lg absolute "></span>
+
+                <span  class="w-full h-full opacity-40 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-2 group-hover:-translate-y-2 "></span>
+
+                <span  class="w-full h-full opacity-80 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-4 group-hover:-translate-y-4"></span>
+
+                <span class=" w-full h-full opacity-100 rounded-lg bg-white/10 transition-transform duration-200 ease-in-out group-hover:translate-x-6 group-hover:-translate-y-6 absolute bg-socialmedia-github bg-no-repeat bg-center bg-[length:50%]"></span>
+              </a>
+
+            </li>
+
+            <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-white/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+              <a class="group w-full h-full flex relative" href="#">
+                <span class="w-full h-full opacity-20 rounded-lg bg-white/10 backdrop-blur-lg absolute "></span>
+
+                <span  class="w-full h-full opacity-40 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-2 group-hover:-translate-y-2 "></span>
+
+                <span  class="w-full h-full opacity-80 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-4 group-hover:-translate-y-4"></span>
+
+                <span class=" w-full h-full opacity-100 rounded-lg bg-white/10 transition-transform duration-200 ease-in-out group-hover:translate-x-6 group-hover:-translate-y-6 absolute bg-socialmedia-linkedin bg-no-repeat bg-center bg-[length:50%]"></span>
+              </a>
+
+            </li>
+
+            <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-white/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+              <a class="group w-full h-full flex relative" href="#">
+                <span class="w-full h-full opacity-20 rounded-lg bg-white/10 backdrop-blur-lg absolute "></span>
+
+                <span  class="w-full h-full opacity-40 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-2 group-hover:-translate-y-2 "></span>
+
+                <span  class="w-full h-full opacity-80 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out group-hover:translate-x-4 group-hover:-translate-y-4"></span>
+
+                <span class=" w-full h-full opacity-100 rounded-lg bg-white/10 transition-transform duration-200 ease-in-out group-hover:translate-x-6 group-hover:-translate-y-6 absolute bg-socialmedia-mail bg-no-repeat bg-center bg-[length:50%]"></span>
+              </a>
+
+            </li>
+
+          </ul>
+      </div>
+  </footer>
+</body>
+<script src="../src/index.js"></script>
+</html>
+
+<!-- REFERS -->
+<!-- https://www.davidobodo.com/ -->
+<!-- http://v1.davidobodo.com/#About -->
