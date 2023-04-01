@@ -65,6 +65,15 @@
     .reveal-from-left{
       @apply opacity-100 translate-x-0 ;
     }
+
+    .hide-to-right{
+      @apply opacity-0 -translate-x-5 ;
+    }
+
+    .reveal-from-right{
+      @apply opacity-100 translate-x-0 ;
+    }
+
     #Project1:checked ~ #Work>div{
       @apply opacity-100
     }

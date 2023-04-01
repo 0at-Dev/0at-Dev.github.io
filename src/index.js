@@ -15,15 +15,21 @@ const revealSectionContent=()=>{
         
         if(Math.floor(aboutTop)<=0 || Math.floor(aboutY)<=0){
             let $title=ABOUT_SECTION.querySelector("div>h2")
-            let $description=ABOUT_SECTION.querySelector("div>p")
+            let $descriptionLeft=ABOUT_SECTION.querySelectorAll("div>p")[0]
+            let $descriptionRight=ABOUT_SECTION.querySelectorAll("div>p")[1]
 
                 if($title.classList.contains("hide-to-left")){
                     $title.classList.remove("hide-to-left")
                     $title.classList.add("reveal-from-left")
                 }
-                if($description.classList.contains("hide-to-left")){
-                    $description.classList.remove("hide-to-left")
-                    $description.classList.add("reveal-from-left")
+                if($descriptionLeft.classList.contains("hide-to-left")){
+                    $descriptionLeft.classList.remove("hide-to-left")
+                    $descriptionLeft.classList.add("reveal-from-left")
+                }
+
+                if($descriptionRight.classList.contains("hide-to-right")){
+                    $descriptionRight.classList.remove("hide-to-right")
+                    $descriptionRight.classList.add("reveal-from-right")
                 }
         }
 }

@@ -486,6 +486,18 @@ body {
   opacity: 1;
 }
 
+.hide-to-right {
+  --tw-translate-x: -1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
+
+.reveal-from-right {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
+}
+
 #Project1:checked ~ #Work>div {
   opacity: 1;
 }
@@ -655,6 +667,10 @@ body {
   right: 0px;
 }
 
+.bottom-\[\.4rem\] {
+  bottom: .4rem;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -757,6 +773,14 @@ body {
 
 .h-\[2\.8em\] {
   height: 2.8em;
+}
+
+.h-\[15vh\] {
+  height: 15vh;
+}
+
+.h-\[13vh\] {
+  height: 13vh;
 }
 
 .min-h-\[85vh\] {
@@ -1138,11 +1162,6 @@ body {
   content: var(--tw-content);
 }
 
-.before\:content-\[\'WEBFLOW\'\]::before {
-  --tw-content: 'WEBFLOW';
-  content: var(--tw-content);
-}
-
 .before\:content-\[\'GIT\'\]::before {
   --tw-content: 'GIT';
   content: var(--tw-content);
@@ -1251,6 +1270,10 @@ body {
   right: 30%;
 }
 
+.peer:checked ~ .peer-checked\:right-\[35\%\] {
+  right: 35%;
+}
+
 .peer:checked ~ .peer-checked\:bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
 }
@@ -1270,6 +1293,10 @@ body {
 
   .desktop\:left-\[2\%\] {
     left: 2%;
+  }
+
+  .desktop\:bottom-4 {
+    bottom: 1rem;
   }
 
   .desktop\:m-auto {
@@ -1296,6 +1323,14 @@ body {
 
   .desktop\:mr-auto {
     margin-right: auto;
+  }
+
+  .desktop\:mr-\[10\%\] {
+    margin-right: 10%;
+  }
+
+  .desktop\:ml-auto {
+    margin-left: auto;
   }
 
   .desktop\:hidden {
@@ -1352,9 +1387,47 @@ body {
     text-align: start;
   }
 
+  .desktop\:text-end {
+    text-align: end;
+  }
+
   .desktop\:backdrop-blur-lg {
     --tw-backdrop-blur: blur(16px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
             backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+
+  .desktop\:hover\:bg-white\/20:hover {
+    background-color: rgb(255 255 255 / 0.2);
+  }
+
+  .group:hover .desktop\:group-hover\:translate-x-2 {
+    --tw-translate-x: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .desktop\:group-hover\:-translate-y-2 {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .desktop\:group-hover\:translate-x-4 {
+    --tw-translate-x: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .desktop\:group-hover\:-translate-y-4 {
+    --tw-translate-y: -1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .desktop\:group-hover\:translate-x-6 {
+    --tw-translate-x: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .desktop\:group-hover\:-translate-y-6 {
+    --tw-translate-y: -1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
