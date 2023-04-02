@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../src/assets/code.svg" type="image/x-icon">
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
-  <title>Oscar Tenias | Front-End Developer</title>
+  <title>Oscar Tenias | Desarrollador Front-End</title>
 </head>
 <body>
   <header class="w-full h-0 flex relative z-20">
@@ -52,7 +53,7 @@
             </a>
           </li>
           <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
-            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-mail bg-no-repeat bg-center bg-contain" href="mailto:oatenias@gmail.com" target="_blank">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-mail bg-no-repeat bg-center bg-contain" href="mailto:oscartenias00@gmail.com" target="_blank">
               
             </a>
           </li>
@@ -93,7 +94,8 @@
           </a>
       </section>
 
-      <section id="Skills" class="bg-dark w-full h-fit mx-auto py-3 flex flex-col content-center items-center place-content-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light ">
+      <div class="absolute top-[100vh] flex invisible h-[3.3em] w-full desktop:top-[calc(100vh-3.8em)]" id="Skills"></div><!-- Separator Element -->
+      <section class="bg-dark w-full h-fit mx-auto py-3 flex flex-col content-center items-center place-content-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light ">
           <div class="w-[98%] h-fit flex flex-col items-center justify-center desktop:flex-row">
               <ul class="w-full h-fit flex flex-col desktop:flex-row desktop:w-fit">
                 <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['HTML'] ">
@@ -118,7 +120,7 @@
           </div>
       </section>
 
-      <section id="About" class="bg-dark w-full h-fit mx-auto flex flex-col items-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light desktop:h-screen">
+      <section id="About" class="bg-dark w-full h-fit mx-auto flex flex-col items-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.05em] after:bg-light desktop:min-h-screen">
 
         <div class="w-[98%] h-fit flex flex-col my-4 py-[3.5em] desktop:mt-[2rem] ">
 
@@ -128,14 +130,18 @@
 
           <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
           w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%]  desktop:ml-[10%] desktop:mr-auto">
-            Desarrollador Front-end con 3 años de experiencia enfocado a aplicaciones web. Desempeñe funciones de programador, trabajé en equipo y además participé en la toma de decisiones respecto a características de las apps.
+            +2 años de experiencia en el desarrollo web en los que tuve la oportunidad de trabajar en equipo, construir desde 0 <span class="italic">(HTML, CSS Y Javascript)</span> aplicaciones completas y tomar decisiones relacionadas a características de las mismas
           </p>
 
           <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
           w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-right desktop:text-end desktop:w-[40%]  desktop:mr-[10%] desktop:ml-auto">
-            Desarrollador Front-end con 3 años de experiencia enfocado a aplicaciones web. Desempeñe funciones de programador, trabajé en equipo y además participé en la toma de decisiones respecto a características de las apps.
+            A lo largo de mi experiencia laboral mi enfoque ha sido a aplicaciones web, sin embargo he  desarrollado webs sencillas, SPAs y he trabajado con <span class="italic">Wordpress</span> partiendo de su interfaz para construir una web/app o consumiendo su <span class="italic">API</span> y programando la <span class="italic">UI</span>
           </p>
 
+          <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
+          w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%]  desktop:ml-[10%] desktop:mr-auto">
+            Actualmente aprendo <span class="italic">React JS</span>, <span class="italic">TypeScript</span>, <span class="italic">testing</span> y <span class="italic">base de datos</span>, pero en mis intereses tambien está ampliar mi Stack aprendiendo lenguajes como <span class="italic">Rust</span>.
+          </p>
         </div>
 
         <a class="w-[3em] h-[3em] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg  absolute bottom-[.4rem] right-10  animate-bounce desktop:bottom-4" href="#Work">
@@ -162,7 +168,11 @@
                     <div class="w-full h-full flex flex-col items-center absolute opacity-100 transition-opacity duration-200 ease-in-out">
 
                       <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
-                        <span class="font-nunito font-extralight text-[.9rem]">PLANNER</span>
+                        <a title="Planner project link" href="https://planner.iniciaapp.com/" class="font-nunito font-extralight text-[.9rem]" target="_blank">PLANNER 
+                          <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
+
+                          </sup>
+                        </a>
                         Herramienta dedicada a usuarios que se desempeñan en la creación de contenido para redes sociales. Esta app organiza y guarda contenido, maneja múltiples tipos de usuario y brinda una interfaz para que los usuarios puedan mostrar el cronograma de contenido a sus clientes.
                       </p>
 
@@ -170,22 +180,30 @@
                     </div>
 
                     <!-- Slide -->
-                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 transition-opacity duration-200 ease-in-out">
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out">
 
                       <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
-                        <span class="font-nunito font-extralight text-[.9rem]">CINEMANIAC</span>
-                          Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Ademas, permite marcar como vista y guardar un comentario de forma local y exportarlo en un archivo .txt.
+                        <a title="Cinemaniac project link" href="https://oat-thecinemaniac.netlify.app/" class="font-nunito font-extralight text-[.9rem]" target="_blank">CINEMANIAC
+                          <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
+
+                          </sup>
+                        </a>
+                          Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Además, permite marcar como vista y guardar un comentario de forma local y exportarlo en un archivo .txt.
                       </p>
 
                       <span class="my-2 w-[90%] text-light font-nunito font-extralight text-[.9rem]">2/3</span>
                     </div>
 
                     <!-- Slide -->
-                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 transition-opacity duration-200 ease-in-out">
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out">
 
                       <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
-                        <span class="font-nunito font-extralight text-[.9rem]">LOGS KEEPER</span>
-                        Registro local de credenciales que pueden ser exportadas en un .txt, y además validadas en la misma interfaz.
+                        <a title="Logs keeper project link" href="https://oat-logs-keeper.netlify.app/" class="font-nunito font-extralight text-[.9rem]" target="_blank">LOGS KEEPER
+                          <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
+
+                          </sup>
+                        </a>
+                        Registro local de credenciales que pueden ser exportadas en un .txt y además validadas en la misma interfaz.
                       </p>
 
                       <span class="my-2 w-[90%] text-light font-nunito font-extralight text-[.9rem]">3/3</span>
@@ -248,7 +266,7 @@
 
             <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-white/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
 
-              <a class="group w-full h-full flex relative" href="mailto:oatenias@gmail.com" target="_blank">
+              <a class="group w-full h-full flex relative" href="mailto:oscartenias00@gmail.com" target="_blank">
                 <span class="w-full h-full opacity-20 rounded-lg bg-white/10 backdrop-blur-lg absolute "></span>
 
                 <span  class="w-full h-full opacity-40 rounded-lg bg-white/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-2 desktop:group-hover:-translate-y-2 "></span>

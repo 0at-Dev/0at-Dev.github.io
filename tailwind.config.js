@@ -19,6 +19,7 @@ module.exports = {
         'socialmedia-github':'url("../src/assets/logo-github.svg")',
         'socialmedia-linkedin':'url("../src/assets/logo-linkedin.svg")',
         'socialmedia-mail':'url("../src/assets/logo-mail.svg")',
+        'goto-box':'url("../src/assets/goto.svg")',
         'scroll-arrow':'url("../src/assets/arrow.svg")',
         'main-pattern':'linear-gradient(45deg, #C06C84, #6C5B7B, #355C7D)'
       },

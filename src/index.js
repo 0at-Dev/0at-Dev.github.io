@@ -15,22 +15,22 @@ const revealSectionContent=()=>{
         
         if(Math.floor(aboutTop)<=0 || Math.floor(aboutY)<=0){
             let $title=ABOUT_SECTION.querySelector("div>h2")
-            let $descriptionLeft=ABOUT_SECTION.querySelectorAll("div>p")[0]
-            let $descriptionRight=ABOUT_SECTION.querySelectorAll("div>p")[1]
+            let $descriptionLeft=ABOUT_SECTION.querySelectorAll("div>p.hide-to-left")
+            let $descriptionRight=ABOUT_SECTION.querySelectorAll("div>p.hide-to-right")
 
-                if($title.classList.contains("hide-to-left")){
-                    $title.classList.remove("hide-to-left")
-                    $title.classList.add("reveal-from-left")
-                }
-                if($descriptionLeft.classList.contains("hide-to-left")){
-                    $descriptionLeft.classList.remove("hide-to-left")
-                    $descriptionLeft.classList.add("reveal-from-left")
-                }
+            if($title.classList.contains("hide-to-left")){
+                $title.classList.remove("hide-to-left")
+                $title.classList.add("reveal-from-left")
+            }
 
-                if($descriptionRight.classList.contains("hide-to-right")){
-                    $descriptionRight.classList.remove("hide-to-right")
-                    $descriptionRight.classList.add("reveal-from-right")
-                }
+            $descriptionLeft.forEach(el=>{
+                el.classList.remove("hide-to-left")
+                el.classList.add("reveal-from-left")
+            })
+            $descriptionRight.forEach(el=>{
+            el.classList.remove("hide-to-right")
+            el.classList.add("reveal-from-right")
+            })
         }
 }
 // Listen
@@ -46,6 +46,7 @@ const revealSectionContent=()=>{
             if(_workSlideActive<_indexLimit){
                 $currentSlide.style.opacity="0"
                 $newActiveSlide.style.opacity="1"
+                $newActiveSlide.style.pointerEvents="all"
                 _workSlideActive=_workSlideActive + 1  
             }
         
@@ -60,6 +61,7 @@ const revealSectionContent=()=>{
             if(_workSlideActive>0){
                 $currentSlide.style.opacity="0"
                 $newActiveSlide.style.opacity="1"
+                $newActiveSlide.style.pointerEvents="all"
                 _workSlideActive=_workSlideActive - 1  
             }
     })

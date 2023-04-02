@@ -612,6 +612,10 @@ body {
   pointer-events: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -651,8 +655,8 @@ body {
   left: 2.5rem;
 }
 
-.bottom-4 {
-  bottom: 1rem;
+.bottom-\[\.4rem\] {
+  bottom: .4rem;
 }
 
 .right-10 {
@@ -667,8 +671,12 @@ body {
   right: 0px;
 }
 
-.bottom-\[\.4rem\] {
-  bottom: .4rem;
+.top-\[calc\(100vh-3\.8em\)\] {
+  top: calc(100vh - 3.8em);
+}
+
+.top-\[100vh\] {
+  top: 100vh;
 }
 
 .z-20 {
@@ -726,6 +734,10 @@ body {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .hidden {
   display: none;
 }
@@ -767,20 +779,28 @@ body {
   height: 100%;
 }
 
-.h-\[28vh\] {
-  height: 28vh;
+.h-\[13vh\] {
+  height: 13vh;
 }
 
 .h-\[2\.8em\] {
   height: 2.8em;
 }
 
-.h-\[15vh\] {
-  height: 15vh;
+.h-\[\.2em\] {
+  height: .2em;
 }
 
-.h-\[13vh\] {
-  height: 13vh;
+.h-\[\.8rem\] {
+  height: .8rem;
+}
+
+.h-\[\.7rem\] {
+  height: .7rem;
+}
+
+.h-\[3\.3em\] {
+  height: 3.3em;
 }
 
 .min-h-\[85vh\] {
@@ -814,6 +834,18 @@ body {
 
 .w-\[2\.8em\] {
   width: 2.8em;
+}
+
+.w-\[\.2em\] {
+  width: .2em;
+}
+
+.w-\[\.8rem\] {
+  width: .8rem;
+}
+
+.w-\[\.7rem\] {
+  width: .7rem;
 }
 
 .min-w-fit {
@@ -921,6 +953,10 @@ body {
 
 .bg-socialmedia-mail {
   background-image: url("../src/assets/logo-mail.svg");
+}
+
+.bg-goto-box {
+  background-image: url("../src/assets/goto.svg");
 }
 
 .bg-contain {
@@ -1034,6 +1070,10 @@ body {
   font-weight: 200;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-relaxed {
   line-height: 1.625;
 }
@@ -1137,6 +1177,37 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:-top-\[1\.5em\]::before {
+  content: var(--tw-content);
+  top: -1.5em;
+}
+
+.before\:h-\[1\.5em\]::before {
+  content: var(--tw-content);
+  height: 1.5em;
+}
+
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.before\:bg-transparent::before {
+  content: var(--tw-content);
+  background-color: transparent;
+}
+
+.before\:bg-red-300::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .before\:content-\[\'HTML\'\]::before {
   --tw-content: 'HTML';
   content: var(--tw-content);
@@ -1202,6 +1273,11 @@ body {
   height: 0.01em;
 }
 
+.after\:h-\[0\.05em\]::after {
+  content: var(--tw-content);
+  height: 0.05em;
+}
+
 .after\:w-\[60\%\]::after {
   content: var(--tw-content);
   width: 60%;
@@ -1210,44 +1286,6 @@ body {
 .after\:bg-light::after {
   content: var(--tw-content);
   background-color: #FFFFFFB3;
-}
-
-.hover\:bg-white\/20:hover {
-  background-color: rgb(255 255 255 / 0.2);
-}
-
-.hover\:hover\:bg-white\/20:hover:hover {
-  background-color: rgb(255 255 255 / 0.2);
-}
-
-.group:hover .group-hover\:translate-x-2 {
-  --tw-translate-x: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:-translate-y-2 {
-  --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:translate-x-4 {
-  --tw-translate-x: 1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:-translate-y-4 {
-  --tw-translate-y: -1rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:translate-x-6 {
-  --tw-translate-x: 1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:-translate-y-6 {
-  --tw-translate-y: -1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .peer:checked ~ .peer-checked\:pointer-events-none {
@@ -1264,10 +1302,6 @@ body {
 
 .peer:checked ~ .peer-checked\:left-\[0\%\] {
   left: 0%;
-}
-
-.peer:checked ~ .peer-checked\:right-\[30\%\] {
-  right: 30%;
 }
 
 .peer:checked ~ .peer-checked\:right-\[35\%\] {
@@ -1287,6 +1321,18 @@ body {
 }
 
 @media (min-width: 601px) {
+  .desktop\:invisible {
+    visibility: hidden;
+  }
+
+  .desktop\:fixed {
+    position: fixed;
+  }
+
+  .desktop\:absolute {
+    position: absolute;
+  }
+
   .desktop\:right-\[2\%\] {
     right: 2%;
   }
@@ -1297,6 +1343,22 @@ body {
 
   .desktop\:bottom-4 {
     bottom: 1rem;
+  }
+
+  .desktop\:top-\[calc\(100vh-3\.3em\)\] {
+    top: calc(100vh - 3.3em);
+  }
+
+  .desktop\:top-\[calc\(100vh-3\.4em\)\] {
+    top: calc(100vh - 3.4em);
+  }
+
+  .desktop\:top-\[calc\(100vh-3\.5em\)\] {
+    top: calc(100vh - 3.5em);
+  }
+
+  .desktop\:top-\[calc\(100vh-3\.8em\)\] {
+    top: calc(100vh - 3.8em);
   }
 
   .desktop\:m-auto {
@@ -1333,6 +1395,10 @@ body {
     margin-left: auto;
   }
 
+  .desktop\:flex {
+    display: flex;
+  }
+
   .desktop\:hidden {
     display: none;
   }
@@ -1342,12 +1408,28 @@ body {
     height: fit-content;
   }
 
-  .desktop\:h-screen {
-    height: 100vh;
-  }
-
   .desktop\:h-\[15vh\] {
     height: 15vh;
+  }
+
+  .desktop\:h-\[2em\] {
+    height: 2em;
+  }
+
+  .desktop\:h-\[2\.5em\] {
+    height: 2.5em;
+  }
+
+  .desktop\:h-\[3em\] {
+    height: 3em;
+  }
+
+  .desktop\:h-\[3\.3em\] {
+    height: 3.3em;
+  }
+
+  .desktop\:min-h-screen {
+    min-height: 100vh;
   }
 
   .desktop\:w-fit {
@@ -1371,6 +1453,10 @@ body {
     width: 80%;
   }
 
+  .desktop\:w-full {
+    width: 100%;
+  }
+
   .desktop\:cursor-pointer {
     cursor: pointer;
   }
@@ -1381,6 +1467,10 @@ body {
 
   .desktop\:rounded-full {
     border-radius: 9999px;
+  }
+
+  .desktop\:bg-transparent {
+    background-color: transparent;
   }
 
   .desktop\:text-start {
