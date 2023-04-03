@@ -1,5 +1,5 @@
 <!doctype html >
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,24 +17,24 @@
 
       <!-- Main Nav -->
       <nav class="bg-white/10 fixed h-[100vh] -right-[100%] peer-checked:right-[0%] transition-[right] duration-200 ease-in-out desktop:backdrop-blur-lg desktop:w-fit desktop:h-fit desktop:my-[2vh]  desktop:right-[2%] desktop:rounded-full ">
-          <ul class="flex flex-col py-1 px-2 desktop:flex-row">
+          <ul class="flex flex-col py-1 px-2 desktop:flex-row" id="NavList">
               
             <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2 ">
-              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#">Inicio</a>
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full" href="#" data-nav-translation-key="home">Inicio</a>
             </li>
             <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
-              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#Skills">Habilidades</a>
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#Skills" data-nav-translation-key="skills">Habilidades</a>
             </li>
             <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
-              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#About">Sobre mi</a>
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#About" data-nav-translation-key="about">Sobre mi</a>
             </li>
             <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
-              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#Work">Proyectos</a>
+              <a class="py-1 px-2 transition-[background-color] duration-200 ease-in-out desktop:hover:bg-white/20 desktop:rounded-full " href="#Work" data-nav-translation-key="work">Proyectos</a>
             </li>
             <li class="m-2 font-inter font-light text-sm text-white/70 desktop:mx-2">
-              <input class="peer hidden" type="checkbox" name="DarkMode" id="DarkMode">
+              <input class="peer hidden" type="checkbox" name="Language" id="Language">
 
-              <label class="py-1 px-2 transition-[background-color] duration-200 ease-in-out rounded-full peer-checked:bg-white/30 desktop:hover:bg-white/20 desktop:cursor-pointer" for="DarkMode">🌐EN</label>
+              <label class="py-1 px-2 transition-[background-color] duration-200 ease-in-out rounded-full peer-checked:bg-white/30 desktop:hover:bg-white/20 desktop:cursor-pointer" for="Language">🌐EN</label>
             </li>
 
           </ul>
@@ -165,9 +165,9 @@
               <!-- wrapper de slides -->
                 <div class="w-full h-full absolute inset-0">
                     <!-- Slide -->
-                    <div class="w-full h-full flex flex-col items-center absolute opacity-100 transition-opacity duration-200 ease-in-out">
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-100 transition-opacity duration-200 ease-in-out" data-work-translation-key="planner">
 
-                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
+                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-start font-inter font-light">
                         <a title="Planner project link" href="https://planner.iniciaapp.com/" class="font-nunito font-extralight text-[.9rem]" target="_blank">PLANNER 
                           <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
 
@@ -180,9 +180,9 @@
                     </div>
 
                     <!-- Slide -->
-                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out">
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out" data-work-translation-key="cinemaniac">
 
-                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
+                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-start font-inter font-light">
                         <a title="Cinemaniac project link" href="https://oat-thecinemaniac.netlify.app/" class="font-nunito font-extralight text-[.9rem]" target="_blank">CINEMANIAC
                           <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
 
@@ -195,9 +195,9 @@
                     </div>
 
                     <!-- Slide -->
-                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out">
+                    <div class="w-full h-full flex flex-col items-center absolute opacity-0 pointer-events-none transition-opacity duration-200 ease-in-out" data-work-translation-key="logs_keeper">
 
-                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-center font-inter font-light">
+                      <p class="w-[90%] text-[1.2em] leading-relaxed text-light text-start font-inter font-light">
                         <a title="Logs keeper project link" href="https://oat-logs-keeper.netlify.app/" class="font-nunito font-extralight text-[.9rem]" target="_blank">LOGS KEEPER
                           <sup class="w-[.7rem] h-[.7rem] inline-flex bg-goto-box bg-no-repeat bg-center bg-contain">
 
@@ -282,7 +282,7 @@
       </div>
   </footer>
 </body>
-<script src="../src/index.js"></script>
+<script src="../src/index.js" type="module"></script>
 </html>
 
 <!-- REFERS -->
