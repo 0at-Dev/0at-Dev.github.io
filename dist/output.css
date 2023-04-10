@@ -2330,17 +2330,12 @@ body {
   color: rgb(255 255 255 / 0.7);
 }
 
-.text-dark {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+.text-light {
+  color: #FFFFFFB3;
 }
 
 .text-transparent {
   color: transparent;
-}
-
-.text-light {
-  color: #FFFFFFB3;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
