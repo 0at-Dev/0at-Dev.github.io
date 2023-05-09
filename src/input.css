@@ -7,6 +7,20 @@
       --fontsize-clamp-desktop:clamp(12px,1.5vw,2.2vw);
       --fontsize-clamp-mobile:clamp(15px,1.5vw,2.2vw);
     }
+    ::-webkit-scrollbar{
+      width: .3em;
+      height: .3em;
+    }
+    ::-webkit-scrollbar-track{
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: #595959;
+      border-radius: 5em;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+      background-color: #6e6e6e;
+    }
 
     @keyframes fluid-gradient {
       0%{background-position: left;}
@@ -56,6 +70,11 @@
       right: 0%;
       bottom: 0%;
     }
+
+    /* .gradient-bg-icon{
+      background: rgb(178,31,31);
+background: linear-gradient(45deg, rgba(178,31,31,0.95) 28%, rgba(253,187,45,0.95) 100%);
+    } */
 
 
     .hide-to-left{
