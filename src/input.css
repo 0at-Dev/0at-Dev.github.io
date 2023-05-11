@@ -36,20 +36,11 @@
     }
 
     #Introduction,.gradient-text::before{ 
+      background:#28abe1 ;
+      background: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
 
-      /* background: #355C7D;
-      background-image: -webkit-linear-gradient(45deg, #C06C84, #6C5B7B, #355C7D);
-      background-image: linear-gradient(45deg, #C06C84, #6C5B7B, #355C7D); */
-
-      /* background: #108dc7;
-      background: -webkit-linear-gradient(to right, #ef8e38, #108dc7);
-      background: linear-gradient(to right, #ef8e38, #108dc7); */
-
-      /* background: #1a2a6c;
-      background: -webkit-linear-gradient(225deg, #fdbb2d, #b21f1f, #1a2a6c,#111827);
-      background: linear-gradient(225deg, #fdbb2d, #b21f1f, #1a2a6c,#111827);el mejorsito */
-      background: rgb(17,24,39);
-      background: linear-gradient(45deg, rgba(17,24,39,0.9501925770308123) 5%, rgba(26,42,108,0.95) 28%, rgba(178,31,31,0.95) 68%, rgba(253,187,45,0.95) 100%);
+      /* background: rgb(17,24,39);
+      background: linear-gradient(45deg, rgba(17,24,39,0.9501925770308123) 5%, rgba(26,42,108,0.95) 28%, rgba(178,31,31,0.95) 68%, rgba(253,187,45,0.95) 100%); */
 
 
       /* background-size: contain; */
@@ -71,9 +62,71 @@
       bottom: 0%;
     }
 
-    /* .gradient-bg-icon{
-      background: rgb(178,31,31);
-background: linear-gradient(45deg, rgba(178,31,31,0.95) 28%, rgba(253,187,45,0.95) 100%);
+    .gradient-title{
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: inline;
+    }
+
+    .gradient-bg{
+      background-color: transparent;
+      background-image: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
+    }
+
+
+    .gradient-bg-empty-effect>.gradient-bg-empty-effect-icon{
+      background-color: transparent;
+      background-image: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
+      background-size: 100%;
+      background-repeat:no-repeat;
+    }
+
+    .gradient-bg-empty-effect>.gradient-bg-empty-effect-label{
+      position: relative;
+    }
+    .gradient-bg-empty-effect>.gradient-bg-empty-effect-label::after{
+      content: 'Mas sobre mi';
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      -webkit-text-fill-color:transparent;
+      -webkit-background-clip: text;
+      background-image: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
+      background-size: 0%;
+      background-clip: text;
+      display: inline;
+    }
+    .gradient-bg-empty-effect:hover>.gradient-bg-empty-effect-label::after{
+      background-size: 100%;
+    }
+
+    .gradient-bg-empty-effect:hover>.gradient-bg-empty-effect-icon{
+      background-size:0%; 
+    }
+    .gradient-bg-empty-effect:hover>.gradient-bg-empty-effect-icon>svg{
+      @apply w-[1.8em] h-[1.8em]
+    }
+
+    /* .gradient-bg:hover{
+      background-size: 0%;
+      will-change: background-position;
+      animation: fluid-gradient 5s infinite alternate;
+    } */
+
+    /* @keyframes in-circle-swoop {
+      from {
+        clip-path: var(--circle-top-right-out);
+      }
+      to {
+        clip-path: var(--circle-bottom-right-in);
+      }
+    }
+    
+    [transition-style="in:custom:circle-swoop"] {
+      --transition__duration: 5s;
+      animation-name: in-circle-swoop;
     } */
 
 

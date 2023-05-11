@@ -20,20 +20,25 @@ const revealSectionContent=()=>{
     let {top:aboutTop, y:aboutY}=aboutSectionBounderies
         
         if(Math.floor(aboutTop)<=0 || Math.floor(aboutY)<=0){
-            let $title=ABOUT_SECTION.querySelector("div>h2")
+            // let $title=ABOUT_SECTION.querySelector("div>h2")
+            let $calltoActionRight=ABOUT_SECTION.querySelectorAll("div>a.hide-to-right")
             let $descriptionLeft=ABOUT_SECTION.querySelectorAll("div>p.hide-to-left")
             let $descriptionRight=ABOUT_SECTION.querySelectorAll("div>p.hide-to-right")
 
-            if($title.classList.contains("hide-to-left")){
-                $title.classList.remove("hide-to-left")
-                $title.classList.add("reveal-from-left")
-            }
+            // if($title.classList.contains("hide-to-left")){
+            //     $title.classList.remove("hide-to-left")
+            //     $title.classList.add("reveal-from-left")
+            // }
 
             $descriptionLeft.forEach(el=>{
                 el.classList.remove("hide-to-left")
                 el.classList.add("reveal-from-left")
             })
             $descriptionRight.forEach(el=>{
+            el.classList.remove("hide-to-right")
+            el.classList.add("reveal-from-right")
+            })
+            $calltoActionRight.forEach(el=>{
             el.classList.remove("hide-to-right")
             el.classList.add("reveal-from-right")
             })

@@ -30,10 +30,18 @@ module.exports = {
         'fluid-gradient':{
           '0%':{'background-position': 'left'},
           '100%':{'background-position': 'right'}
-        }
+        },
+        fade: {
+          '0%': { opacity:0,transform:'translateX(.2em)' },
+          '50%': { opacity:0.2,transform:'translateX(.1em)' },
+          '100%': { opacity:1,transform:'translateX(0em)' },
+        },
+
       },
       animation:{
-        'fluid-gradient':'fluid-gradient 5s infinite alternate'
+        'fluid-gradient':'fluid-gradient 5s infinite alternate',
+        'fade':'fade 500ms linear forwards var(--delay)',
+      
       }
     },
   },

@@ -94,7 +94,55 @@
           </a>
       </section>
 
-      <div class="absolute top-[100vh] flex invisible h-[3.3em] w-full desktop:top-[calc(100vh-3.8em)]" id="Skills"></div><!-- Separator Element -->
+      <section id="About" class="bg-dark w-full h-fit mx-auto flex flex-col items-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.05em] after:bg-light desktop:h-[70vh]">
+
+        <div class="w-[98%] h-full flex flex-col my-2 py-[1em] desktop:mt-[2rem] ">
+
+          <div class="w-full h-full flex flex-col relative desktop:flex-row">
+
+              <p class="leading-snug text-[1.2em] text-light text-center font-nunito font-medium my-4 w-[90%] h-fit mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%] desktop:mt-[1em] desktop:mb-auto desktop:ml-[10%] desktop:mr-auto">
+
+                <span class="tracking-widest font-nunito font-semibold text-[2.4em] gradient-title uppercase">¡Hola!</span> 
+                <br>
+                <br>
+                Soy un apasionado en la creación de aplicaciones web atractivas y funcionales con <span class="italic">más de 2 años de experiencia</span>
+
+              </p> <!--Enfasis  -->
+
+              <p class="leading-relaxed text-[.8em] text-light text-center font-nunito font-light 
+              my-4 w-[90%] h-fit mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-right desktop:text-start desktop:w-[30%] desktop:mt-[4em] desktop:mr-[10%] desktop:ml-auto">
+                Creo en la importancia de la constante mejora y el aprendizaje continuo, por lo que me emociona explorar las ultimas tecnologías y lenguajes.
+              </p> <!-- subtema que invita a ver mas  -->
+
+              <!-- boton Call to action -->
+              <a class="gradient-bg-empty-effect my-2 flex items-center justify-center transition-[transform,opacity] duration-200 ease-in-out hide-to-right desktop:absolute desktop:bottom-[calc(4em)] desktop:right-[calc(25%)] desktop:cursor-pointer">
+
+                  <span class="gradient-bg-empty-effect-icon transition-all duration-500 ease rotate-180   text-light px-2 py-2 w-[3em] h-[3em] rounded-full flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="transition-[width,height] duration-100 ease-in-out rotate-180 w-[1.5em] h-[1.5em]" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12.089 3.634a2 2 0 0 0 -1.089 1.78l-.001 2.585l-1.999 .001a1 1 0 0 0 -1 1v6l.007 .117a1 1 0 0 0 .993 .883l1.999 -.001l.001 2.587a2 2 0 0 0 3.414 1.414l6.586 -6.586a2 2 0 0 0 0 -2.828l-6.586 -6.586a2 2 0 0 0 -2.18 -.434l-.145 .068z" stroke-width="0" fill="currentColor"></path>
+                        <path d="M3 8a1 1 0 0 1 .993 .883l.007 .117v6a1 1 0 0 1 -1.993 .117l-.007 -.117v-6a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+                        <path d="M6 8a1 1 0 0 1 .993 .883l.007 .117v6a1 1 0 0 1 -1.993 .117l-.007 -.117v-6a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor"></path>
+                      </svg>
+                  </span>  
+
+                  <span class="gradient-bg-empty-effect-label after:transition-all after:duration-200 after:delay-100 after:ease mx-2 text-light text-center font-nunito font-bold"> Más sobre mi</span>
+
+              </a>
+
+          </div>
+         
+        </div>
+
+        <a class="w-[3em] h-[3em] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg  absolute bottom-[.4rem] right-10  animate-bounce desktop:bottom-4" href="#Work">
+          <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+        </a>
+        
+      </section>
+
+      <!-- <div class="absolute top-[100vh] flex invisible h-[3.3em] w-full desktop:top-[calc(100vh-3.8em)]" id="Skills"></div>Separator Element -->
 
       <section class="bg-dark w-full h-fit mx-auto py-3 flex flex-col content-center items-center place-content-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.01em] after:bg-light ">
           <div class="w-[98%] h-fit flex flex-col items-center justify-center">
@@ -104,7 +152,7 @@
               </h2>   -->
 
               <ul class="w-full h-fit flex flex-col desktop:flex-row desktop:w-fit">
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li style="--delay:1ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade ">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                       <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-full h-full " viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -119,7 +167,7 @@
 
                 </li>
 
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li style="--delay:100ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade ">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                       <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-full h-full" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -134,7 +182,7 @@
 
                 </li>
 
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li style="--delay:300ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                      <svg xmlns="http://www.w3.org/2000/svg"class="text-white w-full h-full" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -150,7 +198,7 @@
 
                 </li>
 
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li style="--delay:600ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                       <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-full h-full" width="24" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -159,12 +207,12 @@
                   </span>
 
                   <span class="mx-1 text-white uppercase ">
-                      TAILWINDCSS
+                      TAILWIND CSS
                   </span>
 
                 </li>
 
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li style="--delay:900ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                      <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-full h-full" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -184,7 +232,7 @@
 
                 </li>
 
-                <li class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md ">
+                <li  style="--delay:1100ms;" class="my-2 mx-2 min-w-fit py-1 px-2 flex items-center justify-center font-inter font-medium bg-white/10 rounded-md opacity-0 animate-fade">
                   <span class="w-[2em] h-[2em] flex rounded-full gradient-bg-icon ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-full h-full" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -204,67 +252,14 @@
 
                 </li>
               </ul>
-
-
-              <!-- <ul class="w-full h-fit flex flex-col desktop:flex-row desktop:w-fit">
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['HTML'] ">
-                  HTML
-                </li>
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['CSS'] ">
-                  CSS
-                </li>
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['JAVASCRIPT'] ">
-                  JAVASCRIPT
-                </li>
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['REACT'] ">
-                  REACT
-                </li>
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['TAILWINDCSS'] ">
-                  TAILWINDCSS
-                </li>
-                <li class="my-2 min-w-fit py-1 px-2 gradient-text font-inter font-medium text-transparent relative before:content-['GIT'] ">
-                  GIT
-                </li>
-              </ul> -->
           </div>
 
       </section>
 
-      <section id="About" class="bg-dark w-full h-fit mx-auto flex flex-col items-center relative after:absolute after:top-auto after:bottom-[0.01em] after:left-auto after:right-auto after:block after:w-[60%] after:h-[0.05em] after:bg-light desktop:min-h-screen">
 
-        <div class="w-[98%] h-fit flex flex-col my-4 py-[3.5em] desktop:mt-[2rem] ">
+      <section id="Work" class="bg-dark w-full h-screen mx-auto flex flex-col items-center relative">
 
-          <h2 class="text-[1.5em] text-light text-center font-inter font-medium h-fit my-4 w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:ml-[10%] desktop:mr-auto desktop:w-[60%]  ">
-            Sobre mi
-          </h2>
-
-          <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
-          w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%]  desktop:ml-[10%] desktop:mr-auto">
-            +2 años de experiencia en el desarrollo web en los que tuve la oportunidad de trabajar en equipo, construir desde 0 <span class="italic">(HTML, CSS Y Javascript)</span> aplicaciones completas y tomar decisiones relacionadas a características de las mismas
-          </p>
-
-          <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
-          w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-right desktop:text-end desktop:w-[40%]  desktop:mr-[10%] desktop:ml-auto">
-            A lo largo de mi experiencia laboral mi enfoque ha sido a aplicaciones web, sin embargo he  desarrollado webs sencillas, SPAs y he trabajado con <span class="italic">Wordpress</span> partiendo de su interfaz para construir una web/app o consumiendo su <span class="italic">API</span> y programando la <span class="italic">UI</span>
-          </p>
-
-          <p class="leading-relaxed text-[.8em] text-light text-center font-inter font-light my-2
-          w-[90%] mx-auto transition-[transform,opacity] duration-200 ease-in-out hide-to-left desktop:text-start desktop:w-[40%]  desktop:ml-[10%] desktop:mr-auto">
-            Actualmente aprendo <span class="italic">React JS</span>, <span class="italic">TypeScript</span>, <span class="italic">testing</span> y <span class="italic">base de datos</span>, pero en mis intereses tambien está ampliar mi Stack aprendiendo lenguajes como <span class="italic">Rust</span>.
-          </p>
-        </div>
-
-        <a class="w-[3em] h-[3em] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg  absolute bottom-[.4rem] right-10  animate-bounce desktop:bottom-4" href="#Work">
-          <svg class="w-[1.5em] h-[1.5em] fill-light" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-          </svg>
-        </a>
-        
-      </section>
-
-      <section id="Work" class="bg-dark w-full h-screen mx-auto py-3 flex flex-col items-center relative">
-
-        <div class="w-[98%] h-[95%] flex flex-col justify-around my-4 py-[1em] desktop:mt-[2rem] ">
+        <div class="w-[98%] h-[95%] flex flex-col justify-around my-2 py-[1em] desktop:mt-[2rem] ">
             <h2 class="text-[1.5em] text-light text-center font-inter font-medium h-fit my-4 w-[90%] mx-auto desktop:w-[60%] ">
               Mis proyectos
             </h2>
@@ -396,7 +391,7 @@
 </html>
 
 <!-- REFERS -->
-<!-- https://www.davidobodo.com/ -->
-<!-- http://v1.davidobodo.com/#About -->
-<!-- https://blackfish.co/ -->
-<!-- https://www.instagram.com/p/CnERBn_Lb0P/ -->
+<!-- https://dennissnellenberg.com -->
+<!-- https://www.poulos.co/ -->
+<!-- https://www.olivierifrah.com/ -->
+<!-- https://mergify.com/ -->
