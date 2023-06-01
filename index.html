@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="code.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+    <title>Oscar Tenias | Front-End Developer</title>
+  </head>
+  <body class="bg-lightest">
+    <header class="w-full h-0 flex relative ">
+      <input class="peer hidden" type="checkbox" name="MobileNav" id="MobileNav">
+
+      <!-- Main Nav -->
+      <nav class="main-nav z-30 shadow bg-white fixed w-full h-[100vh] -right-[100%] peer-checked:right-[0%]  peer-checked:[&>ul]:opacity-100 peer-checked:[&>div]:flex transition-[transform,right] duration-300 ease-in desktop:backdrop-blur-lg desktop:w-fit desktop:h-fit desktop:my-[2vh]  desktop:right-[2%] desktop:rounded-full">
+
+          <ul class="transition-opacity duration-100 delay-300 ease-in opacity-0 h-[70%] flex flex-col justify-center py-1 px-2 desktop:opacity-100 desktop:flex-row desktop:h-fit desktop:my-0" id="NavList">
+              
+            <li class="my-[.5em] flex flex-col justify-center items-center font-nunito font-bold text-[1.5em] text-dark relative desktop:my-0 desktop:mx-2 desktop:text-sm ">
+              <a class="py-1 px-2 transition-[background-image] gradient-title bg-dark-text-gradient duration-200 ease-in-out desktop:hover:bg-rainbow-text-gradient desktop:rounded-full" href="#" data-nav-translation-key="home">Home</a>
+
+              <div class="active-anchor-underline absolute top-[80%] left-auto right-auto w-0 h-0 p-[.2em] rounded-full bg-rainbow-text-gradient"></div>
+
+            </li>
+           
+            <li class="my-[.5em] flex flex-col justify-center items-center font-nunito font-bold text-[1.5em] text-dark relative desktop:my-0 desktop:mx-2 desktop:text-sm">
+              <a class="py-1 px-2 transition-[background-image] gradient-title bg-dark-text-gradient duration-200 ease-in-out desktop:hover:bg-rainbow-text-gradient desktop:rounded-full" href="#Work" data-nav-translation-key="work">Projects</a>
+            </li>
+            <li class="my-[.5em] flex flex-col justify-center items-center font-nunito font-bold text-[1.5em] text-dark relative desktop:my-0 desktop:mx-2 desktop:text-sm">
+              <a class="py-1 px-2 transition-[background-image] gradient-title bg-dark-text-gradient duration-200 ease-in-out desktop:hover:bg-rainbow-text-gradient desktop:rounded-full" href="#About" data-nav-translation-key="about">About me</a>
+            </li>
+
+            <li class="my-[.5em] flex flex-col justify-center items-center font-nunito font-bold text-[1.5em] text-dark relative desktop:my-0 desktop:mx-2 desktop:text-sm">
+              <input class="peer hidden" type="checkbox" name="Language" id="Language">
+
+              <label class="py-1 px-2 transition-[background-color] duration-200 ease-in-out rounded-full peer-checked:bg-white/30 desktop:hover:bg-white/20 desktop:cursor-pointer" for="Language">🌐ES</label>
+            </li>
+
+          </ul>
+
+          <div class=" flex flex-row items-center justify-center h-[30%] desktop:hidden">
+              <a class="mx-[.5em] font-inter font-[500] text-sm text-semidark py-1 px-2 w-[2.7em] h-[2.7em] flex bg-socialmedia-github bg-no-repeat bg-center bg-contain  desktop:mx-2" href="https://github.com/0at-Dev" target="_blank">
+              </a>
+              <a class="mx-[.5em] font-inter font-[500] text-sm text-semidark py-1 px-2 w-[2.7em] h-[2.7em] flex bg-socialmedia-linkedin bg-no-repeat bg-center bg-contain  desktop:mx-2" href="https://www.linkedin.com/in/oscar-tenias/" target="_blank">
+              </a>
+              <a class="mx-[.5em] font-inter font-[500] text-sm text-semidark py-1 px-2 w-[2.7em] h-[2.7em] flex bg-socialmedia-mail bg-no-repeat bg-center bg-contain  desktop:mx-2" href="mailto:oscartenias00@gmail.com" target="_blank">
+              </a>
+          </div>
+
+      </nav>
+
+      <!-- Contact nav -->
+      <nav class="contact-nav z-20 fixed h-[100vh] transition-[transform]  duration-200 ease-in-out desktop:w-fit desktop:h-fit desktop:my-[2vh]">
+        <ul class="flex flex-col py-1 px-2 desktop:flex-row" id="ContactList">
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-github bg-no-repeat bg-center bg-contain" href="https://github.com/0at-Dev" target="_blank">
+            </a>
+          </li>
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-linkedin bg-no-repeat bg-center bg-contain" href="www.linkedin.com/in/oscar-tenias" target="_blank">
+              
+            </a>
+          </li>
+          <li class="m-2 font-inter font-[500] text-sm text-semidark desktop:mx-2 ">
+            <a class="py-1 px-2 w-[1.5em] h-[1.5em] flex bg-socialmedia-mail bg-no-repeat bg-center bg-contain" href="mailto:oscartenias00@gmail.com" target="_blank">
+              
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Open nav  -->
+      <label class="z-30 w-[3em] h-[3em] flex items-center justify-center rounded-full shadow bg-white fixed my-[2vh] right-[5%] transition-[opacity,background-color] duration-200 ease-in-out peer-checked:bg-transparent peer-checked:shadow-none peer-checked:[&>span]:bg-transparent peer-checked:[&>span]:-right-2 peer-checked:[&>span]:before:rotate-45 peer-checked:[&>span]:before:translate-x-[0em] peer-checked:[&>span]:before:translate-y-[0em] peer-checked:[&>span]:after:-rotate-45 peer-checked:[&>span]:after:-translate-x-[.05em] peer-checked:[&>span]:after:-translate-y-[.01em] desktop:hidden desktop:cursor-pointer" for="MobileNav">
+
+        <span class="transition-colors duration-200 ease-in-out w-[1.5em] h-[.15em] bg-dark rounded-full before:transition-transform before:duration-200 before:ease-in-out before:absolute before:w-[1.5em] before:h-[.15em] before:bg-dark before:rounded-full before:-translate-y-[.4em] after:transition-transform after:duration-200 after:ease-in-out after:absolute after:w-[1.5em] after:h-[.15em] after:bg-dark after:rounded-full after:translate-y-[.4em]"></span>
+        
+      </label>
+
+    </header>
+    <main class="w-full min-h-[85vh]">
+  
+      <!-- Introduction  -->
+        <section id="Introduction" class="w-full h-screen flex flex-col justify-center items-center relative ">
+
+            <!-- <div id="IntroductionBlobsContainer" class="z-10 absolute w-full h-full flex items-center justify-center overflow-hidden desktop:block"> -->
+              <!-- naranja top-[40%] left-[23%] desktop:left-[42%] desktop:top-[20%] desktop:w-[25%]<svg class="absolute w-[40%] inset-0 my-auto mx-auto desktop:w-[25%]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg1" filter="blur(0px)" style="opacity: 1;" transform="rotate(0)">                        <defs>                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(241, 143, 1);"></stop>                            <stop offset="100%" style="stop-color: rgb(241, 143, 1);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient1)" style="opacity: 0.6;"><animate attributeName="d" dur="11.8s" repeatCount="indefinite" values="M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z;M385.47259,309.13613Q368.27225,368.27225,309.13613,425.14983Q250,482.02741,183.02911,432.9846Q116.05821,383.94179,100.85787,316.97089Q85.65753,250,111.11302,193.28426Q136.56852,136.56852,193.28426,70.4846Q250,4.40068,303.89298,73.30736Q357.78596,142.21404,380.22944,196.10702Q402.67293,250,385.47259,309.13613Z;M405.0078,325.44624Q400.89248,400.89248,325.44624,434.97549Q250,469.0585,165.42535,444.1039Q80.8507,419.1493,84.75627,334.57465Q88.66184,250,94.44262,175.1117Q100.2234,100.2234,175.1117,82.29749Q250,64.37159,306.73538,100.45042Q363.47075,136.52925,386.29693,193.26462Q409.12312,250,405.0078,325.44624Z;M408.24461,332.63257Q415.26513,415.26513,332.63257,434.71568Q250,454.16622,179.33614,422.74697Q108.67228,391.32772,65.87585,320.66386Q23.07942,250,63.27221,176.73251Q103.46501,103.46501,176.73251,63.02288Q250,22.58075,311.86507,74.4253Q373.73015,126.26985,387.47712,188.13493Q401.22409,250,408.24461,332.63257Z;M418.08664,320.33435Q390.6687,390.6687,320.33435,427.91946Q250,465.17023,188.27506,419.31005Q126.55013,373.44987,106.38448,311.72494Q86.21883,250,84.09726,165.98785Q81.9757,81.9757,165.98785,53.98938Q250,26.00305,311.1687,76.83282Q372.3374,127.6626,408.92099,188.8313Q445.50458,250,418.08664,320.33435Z;M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z"></animate></path></svg> -->
+              <!-- azul  w-[38%] top-[30%] desktop:left-[32%] desktop:top-[25%] desktop:w-[30%]<svg class="absolute w-[38%]  inset-0 my-auto mx-auto desktop:w-[30%]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg2" style="opacity: 1;">                        <defs>                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(225, 238, 244);"></stop>                            <stop offset="100%" style="stop-color: rgb(40, 171, 225);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient2)" style="opacity: 0.6;"><animate attributeName="d" dur="10s" repeatCount="indefinite" values="M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z;M453.70516,317.0107Q433.36186,384.02139,362.52423,381.146Q291.6866,378.27061,242.8433,399.93801Q194,421.60541,117.08118,412.14317Q40.16237,402.68093,64.29201,326.34046Q88.42165,250,109.0107,206.32693Q129.59975,162.65387,148.64317,78.76495Q167.6866,-5.12397,241.8433,20.74072Q316,46.60541,350.8433,99.17023Q385.6866,151.73505,429.86753,200.86753Q474.04846,250,453.70516,317.0107Z;M410.95278,296.31131Q377.83016,342.62262,346.59668,396.40799Q315.3632,450.19336,253.66275,438.70512Q191.9623,427.21687,143.72172,394.79004Q95.48115,362.3632,86.24057,306.1816Q77,250,74.51885,185.3632Q72.0377,120.72639,123.0377,68.91975Q174.0377,17.1131,239.88914,47.47163Q305.74057,77.83016,366.40332,99.75233Q427.06607,121.67451,435.57074,185.83725Q444.0754,250,410.95278,296.31131Z;M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z;M403.5,294Q372,338,343,393Q314,448,254,435.5Q194,423,138,397.5Q82,372,88,311Q94,250,86,187.5Q78,125,134,95.5Q190,66,253,57Q316,48,362,91.5Q408,135,421.5,192.5Q435,250,403.5,294Z;M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z"></animate></path></svg> -->
+              <!-- rojo w-[31%] top-[39%] left-[43%] desktop:left-[38%] desktop:top-[15%] desktop:w-[20%]<svg class="absolute w-[31%]  inset-0 my-auto mx-auto desktop:w-[20%]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg3" style="opacity: 1;">                        <defs>                        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(255, 114, 159);"></stop>                            <stop offset="100%" style="stop-color: rgb(225, 238, 244);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient3)" style="opacity: 0.6;"><animate attributeName="d" dur="16.2s" repeatCount="indefinite" values="M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z;M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z;M429,328Q437,406,362,433Q287,460,218,442Q149,424,122.5,365Q96,306,74.5,242Q53,178,94.5,115Q136,52,206.5,73Q277,94,347.5,101.5Q418,109,419.5,179.5Q421,250,429,328Z;M453.57191,328.53752Q437.08754,407.07503,364.57816,448.74386Q292.06878,490.41269,219.55628,459.1657Q147.04377,427.91871,108.99375,371.46874Q70.94372,315.01876,56.52814,244.52814Q42.11255,174.03752,86.02814,107.96874Q129.94372,41.89995,209.98749,31.84993Q290.03126,21.79991,346.01876,71.89683Q402.00625,121.99375,436.03126,185.99687Q470.05628,250,453.57191,328.53752Z;M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z"></animate></path></svg> -->
+            <!-- </div> -->
+ 
+            <div id="IntroductionTitleContainer" class="z-20 relative mx-auto w-[70%] flex desktop:w-fit">
+              <div  class="absolute w-full h-full flex items-center justify-center">
+  <!-- naranja --><svg class="absolute w-[12em] top-[0%] left-[38%] desktop:left-[28%] desktop:-top-[128%] desktop:w-[16.8em]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg1" filter="blur(0px)" style="opacity: 1;" transform="rotate(0)">                        <defs>                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(241, 143, 1);"></stop>                            <stop offset="100%" style="stop-color: rgb(241, 143, 1);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient1)" style="opacity: 0.6;"><animate attributeName="d" dur="11.8s" repeatCount="indefinite" values="M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z;M385.47259,309.13613Q368.27225,368.27225,309.13613,425.14983Q250,482.02741,183.02911,432.9846Q116.05821,383.94179,100.85787,316.97089Q85.65753,250,111.11302,193.28426Q136.56852,136.56852,193.28426,70.4846Q250,4.40068,303.89298,73.30736Q357.78596,142.21404,380.22944,196.10702Q402.67293,250,385.47259,309.13613Z;M405.0078,325.44624Q400.89248,400.89248,325.44624,434.97549Q250,469.0585,165.42535,444.1039Q80.8507,419.1493,84.75627,334.57465Q88.66184,250,94.44262,175.1117Q100.2234,100.2234,175.1117,82.29749Q250,64.37159,306.73538,100.45042Q363.47075,136.52925,386.29693,193.26462Q409.12312,250,405.0078,325.44624Z;M408.24461,332.63257Q415.26513,415.26513,332.63257,434.71568Q250,454.16622,179.33614,422.74697Q108.67228,391.32772,65.87585,320.66386Q23.07942,250,63.27221,176.73251Q103.46501,103.46501,176.73251,63.02288Q250,22.58075,311.86507,74.4253Q373.73015,126.26985,387.47712,188.13493Q401.22409,250,408.24461,332.63257Z;M418.08664,320.33435Q390.6687,390.6687,320.33435,427.91946Q250,465.17023,188.27506,419.31005Q126.55013,373.44987,106.38448,311.72494Q86.21883,250,84.09726,165.98785Q81.9757,81.9757,165.98785,53.98938Q250,26.00305,311.1687,76.83282Q372.3374,127.6626,408.92099,188.8313Q445.50458,250,418.08664,320.33435Z;M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z"></animate></path></svg>
+  <!-- azul --><svg class="absolute w-[14em] top-[27%] left-[2%] desktop:left-[0%] desktop:-top-[75%] desktop:w-[19em]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg2" style="opacity: 1;">                        <defs>                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(225, 238, 244);"></stop>                            <stop offset="100%" style="stop-color: rgb(40, 171, 225);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient2)" style="opacity: 0.6;"><animate attributeName="d" dur="10s" repeatCount="indefinite" values="M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z;M453.70516,317.0107Q433.36186,384.02139,362.52423,381.146Q291.6866,378.27061,242.8433,399.93801Q194,421.60541,117.08118,412.14317Q40.16237,402.68093,64.29201,326.34046Q88.42165,250,109.0107,206.32693Q129.59975,162.65387,148.64317,78.76495Q167.6866,-5.12397,241.8433,20.74072Q316,46.60541,350.8433,99.17023Q385.6866,151.73505,429.86753,200.86753Q474.04846,250,453.70516,317.0107Z;M410.95278,296.31131Q377.83016,342.62262,346.59668,396.40799Q315.3632,450.19336,253.66275,438.70512Q191.9623,427.21687,143.72172,394.79004Q95.48115,362.3632,86.24057,306.1816Q77,250,74.51885,185.3632Q72.0377,120.72639,123.0377,68.91975Q174.0377,17.1131,239.88914,47.47163Q305.74057,77.83016,366.40332,99.75233Q427.06607,121.67451,435.57074,185.83725Q444.0754,250,410.95278,296.31131Z;M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z;M403.5,294Q372,338,343,393Q314,448,254,435.5Q194,423,138,397.5Q82,372,88,311Q94,250,86,187.5Q78,125,134,95.5Q190,66,253,57Q316,48,362,91.5Q408,135,421.5,192.5Q435,250,403.5,294Z;M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z"></animate></path></svg>
+  <!-- rojo --><svg class="absolute w-[10em] -top-[28%] left-[23%] desktop:left-[15%] desktop:-top-[150%] desktop:w-[13.5em]" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" id="blobSvg3" style="opacity: 1;">                        <defs>                        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">                            <stop offset="0%" style="stop-color: rgb(255, 114, 159);"></stop>                            <stop offset="100%" style="stop-color: rgb(225, 238, 244);"></stop>                        </linearGradient>                        </defs>                                            <path id="blob" fill="url(#gradient3)" style="opacity: 0.6;"><animate attributeName="d" dur="16.2s" repeatCount="indefinite" values="M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z;M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z;M429,328Q437,406,362,433Q287,460,218,442Q149,424,122.5,365Q96,306,74.5,242Q53,178,94.5,115Q136,52,206.5,73Q277,94,347.5,101.5Q418,109,419.5,179.5Q421,250,429,328Z;M453.57191,328.53752Q437.08754,407.07503,364.57816,448.74386Q292.06878,490.41269,219.55628,459.1657Q147.04377,427.91871,108.99375,371.46874Q70.94372,315.01876,56.52814,244.52814Q42.11255,174.03752,86.02814,107.96874Q129.94372,41.89995,209.98749,31.84993Q290.03126,21.79991,346.01876,71.89683Q402.00625,121.99375,436.03126,185.99687Q470.05628,250,453.57191,328.53752Z;M402.96858,305.89372Q383.43068,361.78743,330.92976,387.4658Q278.42884,413.14418,202.60721,438.39372Q126.78558,463.64325,93.53789,391.42791Q60.29021,319.21257,78.64603,256.64233Q97.00185,194.07209,128.64418,144.10813Q160.28651,94.14418,219.21534,92.06839Q278.14418,89.9926,343.5342,103.10536Q408.92421,116.21812,415.71534,183.10906Q422.50647,250,402.96858,305.89372Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z"></animate></path></svg>
+              </div>
+              <h1  class="z-20 tracking-wide leading-snug text-[3.7em] gradient-title bg-dark-text-gradient font-inter font-black text-dark text-center">
+                Oscar Tenias
+              </h1>
+              
+            </div>
+            
+            <div id="IntroductionSubtitleContainer" class="z-20 overflow-hidden mx-auto my-4 desktop:my-0">
+              <h1 class="text-[1.2rem] text-dark text-center gradient-title bg-dark-text-gradient font-nunito font-normal h-fit my-1 desktop:w-[40%]">
+                Front-End Developer
+              </h1>
+            </div>
+          
+            <a href="mailto:oscartenias00@gmail.com" target="_blank" id="IntroductionContactButton" class="group z-20 bg-transparent w-[5em] h-[5em] flex items-center justify-center absolute bottom-20 desktop:w-[3em] desktop:h-[3em] desktop:left-10 desktop:bottom-10">
+
+                <div id="IntroductionContactDarkBubble" class="w-full h-full absolute !-left-[30%] bg-dark/75 rounded-full blur-[.02em] shadow-none group-hover:!transition-[shadow,blur] group-hover:!duration-200 group-hover:!ease-in-out group-hover:shadow group-hover:blur-[.04em] desktop:!left-0"> </div>
+                
+                <div id="IntroductionContactSemiBubble" class="w-[80%] h-[80%] absolute left-[30%] bg-dark/40 rounded-full blur-[.02em] shadow-none group-hover:!transition-[shadow,blur] group-hover:!duration-200 group-hover:!ease-in-out group-hover:shadow group-hover:blur-[.04em] desktop:!left-[60%]"></div>
+
+                <div id="IntroductionContactLightBubble" class="w-[65%] h-[65%] absolute left-[90%] bg-dark/5 rounded-full blur-[.02em] shadow-none group-hover:!transition-[shadow,blur] group-hover:!duration-200 group-hover:!ease-in-out group-hover:shadow group-hover:blur-[.04em] desktop:!left-[120%]"></div>
+
+                <span id="IntroductionContactLabel" class="z-30 min-w-[7em] w-fit h-fit left-0 absolute font-nunito font-bold text-[1.2em] text-darkest desktop:!left-[30%] desktop:text-[.9em]">Get in touch!</span>
+
+            </a>
+
+            <a href="#Work" id="IntroductionScrollButton" class="group z-20 absolute top-auto bottom-auto right-10 vertical-lr hidden items-center justify-center desktop:flex desktop:flex-row">
+
+              <span class="scroll-anchor my-2 text-[1.2em] text-dark font-nunito font-light">Scroll down</span>
+
+              <svg  class="w-[1em] h-[1em] text-dark group-hover:!transition-transform group-hover:!duration-200 group-hover:!ease-in-out group-hover:!scale-125 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+              </svg>
+
+            </a>
+        </section>
+
+        <section id="Work" class="w-full h-fit min-h-screen mx-auto flex flex-col items-center relative">
+            <div class="w-full h-fit min-h-screen flex flex-col">
+              <h2 class="work-section-title overflow-hidden w-fit h-fit text-darkest font-nunito font-medium text-[3em] mt-[calc(1.5em+1vh)] mb-5 ml-10 ">
+                My work
+              </h2>
+              <!-- List -->
+              <ul class="my-2 w-full h-fit flex flex-col  divide-[#1c1d202d] divide-y-[.1em]">
+
+                <li data-work-key="cinemaniac" class="work-section-workitem  py-[1em] mx-auto w-[90%] flex flex-col h-[90vh] tablet:flex-col tablet:h-[90vh] desktop:h-[60vh] desktop:flex-row " >
+
+                    <!-- Texto y link que lleva a a pagina -->
+                    <div class="work-section-workitem-description my-auto w-full h-[40%] flex flex-col justify-center tablet:w-full tablet:h-[40%] desktop:w-[40%] desktop:h-full desktop:mx-auto">
+
+                      <p class="my-[.5em] text-dark font-nunito font-light text-[2em]" >
+                          cinemaniac
+                      </p>
+
+                      <p  class="my-[.5em] text-dark font-nunito font-light text-[.8em]">
+                        Movie search engine that consumes the themoviedb API, from which I retrieve data about upcoming movies or movies that the user specifically searches for. Additionally, it allows marking movies as watched and saving a comment locally, with the ability to export it to a .txt file.
+                      </p>
+
+                      <a href="https://oat-thecinemaniac.netlify.app/" target="_blank" class="my-[1em] py-[.5em] px-[.8em] w-fit h-fit flex flex-row bg-white rounded-md shadow text-dark font-nunito font-bold text-[.8em]">
+
+                        <span>
+                          Go to live site
+                        </span>  
+
+                        <svg class="text-darkest w-[.8em] h-[.8em] mx-[.4em] my-auto" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                          <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                      </a>
+
+                    </div>
+
+                    <!-- Imagenes -->
+                    <div class="work-section-workitem-images my-auto w-full h-[40%] grid grid-cols-3 grid-rows-3 gap-2 overflow-hidden relative tablet:w-full tablet:h-[40%] tablet:grid-cols-3 desktop:w-[40%] desktop:h-full desktop:mx-auto desktop:grid-rows-3 ">
+
+                        <!-- Desktop image -->
+                        <span class="shadow row-span-2 col-span-2 rounded-md overflow-hidden ">
+                          <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/cinemaniac_home_desktop.PNG" alt="">
+                        </span>
+
+                        <!-- Mobile image -->
+                        <span class="w-[92%] h-[90%] shadow col-start-3 row-start-2 row-span-2 rounded-md overflow-hidden">
+                          <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover " src="work/cinemaniac_details_mobile.PNG" alt="">
+                        </span>
+
+                        <!-- Extra Image -->
+                        <span class="ml-auto w-[80%] h-full shadow col-span-2 row-start-3 rounded-md overflow-hidden">
+                          <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/cinemaniac_mymovies_desktop.PNG" alt="">
+                        </span>
+
+                    </div>
+
+                </li>
+
+                <li data-work-key="logs" class="work-section-workitem  py-[1em] mx-auto w-[90%] flex flex-col h-[90vh] tablet:flex-col tablet:h-[90vh] desktop:h-[60vh] desktop:flex-row " >
+
+                  <!-- Texto y link que lleva a a pagina -->
+                  <div class="work-section-workitem-description my-auto w-full h-[40%] flex flex-col justify-center tablet:w-full tablet:h-[40%] desktop:w-[40%] desktop:h-full desktop:mx-auto">
+
+                    <p class="my-[.5em] text-dark font-nunito font-light text-[2em]" >
+                        logs keeper
+                    </p>
+
+                    <p  class="my-[.5em] text-dark font-nunito font-light text-[.8em]">
+                      Local credentials registry that can be exported to a .txt file and also validated within the same interface.
+                    </p>
+
+                    <a href="https://oat-logs-keeper.netlify.app/" target="_blank" class="my-[1em] py-[.5em] px-[.8em] w-fit h-fit flex flex-row bg-white rounded-md shadow text-dark font-nunito font-bold text-[.8em]">
+
+                      <span>
+                        Go to live site
+                      </span>  
+
+                      <svg class="text-darkest w-[.8em] h-[.8em] mx-[.4em] my-auto" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>
+                    </a>
+
+                  </div>
+
+                  <!-- Imagenes -->
+                  <div class="work-section-workitem-images my-auto w-full h-[40%] grid grid-cols-3 grid-rows-3 gap-2 overflow-hidden relative tablet:w-full tablet:h-[40%] tablet:grid-cols-3 desktop:w-[40%] desktop:h-full desktop:mx-auto desktop:grid-rows-3 ">
+
+                      <!-- Desktop image -->
+                      <span class="shadow row-span-2 col-span-2 rounded-md overflow-hidden ">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/logs-keeper_home_desktop.PNG" alt="">
+                      </span>
+
+                      <!-- Mobile image -->
+                      <span class="w-[92%] h-[90%] shadow col-start-3 row-start-2 row-span-2 rounded-md overflow-hidden">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover " src="work/logs-keeper_home_mobile.PNG" alt="">
+                      </span>
+
+                      <!-- Extra Image -->
+                      <span class="ml-auto w-[80%] h-full shadow col-span-2 row-start-3 rounded-md overflow-hidden">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/logs-keeper_logs_desktop.PNG" alt="">
+                      </span>
+
+                  </div>
+
+                </li>
+
+                <li data-work-key="planner" class="work-section-workitem  py-[1em] mx-auto w-[90%] flex flex-col h-[90vh] tablet:flex-col tablet:h-[90vh] desktop:h-[60vh] desktop:flex-row " >
+
+                  <!-- Texto y link que lleva a a pagina -->
+                  <div class="work-section-workitem-description my-auto w-full h-[40%] flex flex-col justify-center tablet:w-full tablet:h-[40%] desktop:w-[40%] desktop:h-full desktop:mx-auto">
+
+                    <p class="my-[.5em] text-dark font-nunito font-light text-[2em]" >
+                      planner
+                    </p>
+
+                    <p  class="my-[.5em] text-dark font-nunito font-light text-[.8em]">
+                      Tool dedicated to users engaged in content creation for social media. This app organizes and saves content, handles multiple user types, and provides an interface for users to showcase their content schedule to their clients.
+                    </p>
+
+                    <a href="https://planner.iniciaapp.com/" target="_blank" class="my-[1em] py-[.5em] px-[.8em] w-fit h-fit flex flex-row bg-white rounded-md shadow text-dark font-nunito font-bold text-[.8em]">
+
+                      <span>
+                        Go to live site
+                      </span>  
+
+                      <svg class="text-darkest w-[.8em] h-[.8em] mx-[.4em] my-auto" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>
+                    </a>
+
+                  </div>
+
+                  <!-- Imagenes -->
+                  <div class="work-section-workitem-images my-auto w-full h-[40%] grid grid-cols-3 grid-rows-3 gap-2 overflow-hidden relative tablet:w-full tablet:h-[40%] tablet:grid-cols-3 desktop:w-[40%] desktop:h-full desktop:mx-auto desktop:grid-rows-3 ">
+
+                      <!-- Desktop image -->
+                      <span class="shadow row-span-2 col-span-2 rounded-md overflow-hidden ">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/planner_home_desktop.PNG" alt="">
+                      </span>
+
+                      <!-- Mobile image -->
+                      <span class="w-[92%] h-[90%] shadow col-start-3 row-start-2 row-span-2 rounded-md overflow-hidden">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover " src="work/planner_inspect_mobile.PNG" alt="">
+                      </span>
+
+                      <!-- Extra Image -->
+                      <span class="ml-auto w-[80%] h-full shadow col-span-2 row-start-3 rounded-md overflow-hidden">
+                        <img class="w-full h-full object-fill tablet:object-fill desktop:object-cover" src="work/planner_login_desktop.PNG" alt="">
+                      </span>
+
+                  </div>
+
+                </li>
+
+              </ul> 
+            </div>
+        </section>
+
+        <section id="About" class="w-full min-h-[40vh] mx-auto flex flex-col items-center tablet:min-h-[20vh]">
+            <div class="w-full min-h-[40vh] flex flex-col tablet:min-h-[20vh]">
+
+              <h2 class="about-section-title overflow-hidden w-fit h-fit max-h-[12vh] text-darkest font-nunito font-medium text-[3em] mt-[calc(1.5em+1vh)] mb-5 ml-10 ">
+                About me
+              </h2>
+
+              <div class="m-auto w-[80%] min-h-[80vh] grid grid-cols-1 auto-rows-fr tablet:min-h-[20vh] tablet:h-[20vh] desktop:min-h-fit desktop:h-[40vh] desktop:grid-cols-2 desktop:grid-rows-3 gap-1 ">
+
+                  <div class="about-section-aboutitem flex flex-col items-center row-span-2 bg-white shadow rounded-md desktop:row-span-3  ">
+                    <p class="my-[.5em] w-[90%] text-dark font-nunito font-medium text-[1.5em] text-start">
+                      More than 2 years of experience in web development
+                    </p>
+
+                    <p class="my-[.5em]  w-[90%] text-dark font-nunito font-light text-[.8em]">
+                      I have had the opportunity to work as a team and make key decisions in various projects, ranging from complete applications to simple websites and WordPress development
+                    </p>
+                  </div>
+
+                  <div class="about-section-aboutitem flex flex-col items-center justify-center bg-white shadow rounded-md desktop:col-start-2 desktop:row-span-2 desktop:w-[87%] desktop:justify-self-center"> 
+                    <p class="my-[.5em]  w-[90%] text-dark font-nunito font-light text-[.8em]">
+                      Among my skills, I excel in fundamental web development technologies such as HTML, CSS, and JavaScript. Additionally, I have experience in using Tailwind CSS and React JS
+                    </p>
+                  </div>
+                  
+                  <div class="about-section-aboutitem flex flex-col items-center justify-center bg-white shadow rounded-md desktop:col-start-2 desktop:w-[87%] desktop:justify-self-center">
+                    <p class="my-[.5em]  w-[90%] text-dark font-nunito font-light text-[.8em]">
+                      Currently, I am learning TypeScript, databases, and testing
+                    </p>
+                  </div>
+              </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer class="mt-[4em] w-full h-[20vh] flex desktop:h-[20vh]">
+        <div class="w-full h-full m-auto flex flex-col items-center justify-center">
+            <ul class=" mb-4 flex ">
+
+              <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-dark/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+                <a class="group w-full h-full flex relative" href="https://github.com/0at-Dev" target="_blank">
+                  <span class="w-full h-full opacity-20 rounded-lg bg-dark backdrop-blur-lg absolute "></span>
+
+                  <span  class="w-full h-full opacity-40 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-2 desktop:group-hover:-translate-y-2 "></span>
+
+                  <span  class="w-full h-full opacity-80 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-4 desktop:group-hover:-translate-y-4"></span>
+
+                  <span class=" w-full h-full opacity-100 rounded-lg bg-dark/10 transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-6 desktop:group-hover:-translate-y-6 absolute bg-socialmedia-github-light bg-no-repeat bg-center bg-[length:50%]"></span>
+                </a>
+
+              </li>
+
+              <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-dark/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+                <a class="group w-full h-full flex relative" href="https://www.linkedin.com/in/oscar-tenias/" target="_blank">
+                  <span class="w-full h-full opacity-20 rounded-lg bg-dark backdrop-blur-lg absolute "></span>
+
+                  <span  class="w-full h-full opacity-40 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-2 desktop:group-hover:-translate-y-2 "></span>
+
+                  <span  class="w-full h-full opacity-80 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-4 desktop:group-hover:-translate-y-4"></span>
+
+                  <span class=" w-full h-full opacity-100 rounded-lg bg-dark/10 transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-6 desktop:group-hover:-translate-y-6 absolute bg-socialmedia-linkedin-light bg-no-repeat bg-center bg-[length:50%]"></span>
+                </a>
+
+              </li>
+
+              <li class=" mx-8 w-[2.8em] h-[2.8em] flex items-center justify-center rounded-lg bg-dark/10 backdrop-blur-lg -rotate-[30deg] skew-x-[25deg] skew-y-[0deg] ">
+
+                <a class="group w-full h-full flex relative" href="mailto:oscartenias00@gmail.com" target="_blank">
+                  <span class="w-full h-full opacity-20 rounded-lg bg-dark backdrop-blur-lg absolute "></span>
+
+                  <span  class="w-full h-full opacity-40 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-2 desktop:group-hover:-translate-y-2 "></span>
+
+                  <span  class="w-full h-full opacity-80 rounded-lg bg-dark/10 backdrop-blur-lg absolute transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-4 desktop:group-hover:-translate-y-4"></span>
+
+                  <span class=" w-full h-full opacity-100 rounded-lg bg-dark/10 transition-transform duration-200 ease-in-out desktop:group-hover:translate-x-6 desktop:group-hover:-translate-y-6 absolute bg-socialmedia-mail-light bg-no-repeat bg-center bg-[length:50%]"></span>
+                </a>
+
+              </li>
+
+            </ul>
+            <p class="mb-1 font-inter font-light text-[.75em] text-darkest">
+              Copyright © 2023 Oscar Tenias. All rights reserved.  
+            </p>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
