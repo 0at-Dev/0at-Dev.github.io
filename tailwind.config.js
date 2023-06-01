@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from 'tailwindcss/plugin'
 
-const plugin=require('tailwindcss/plugin')
-
-module.exports = {
-  content: ["./**/*.{html,js}"],
+export default {
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       screens:{
@@ -24,14 +23,14 @@ module.exports = {
         'nunito':["Nunito","sans-serif"],
       },
       backgroundImage:{
-        'socialmedia-github':'url("../src/assets/logo-github.svg")',
-        'socialmedia-github-light':'url("../src/assets/logo-github-light.svg")',
-        'socialmedia-linkedin':'url("../src/assets/logo-linkedin.svg")',
-        'socialmedia-linkedin-light':'url("../src/assets/logo-linkedin-light.svg")',
-        'socialmedia-mail':'url("../src/assets/logo-mail.svg")',
-        'socialmedia-mail-light':'url("../src/assets/logo-mail-light.svg")',
-        'goto-box':'url("../src/assets/goto.svg")',
-        'scroll-arrow':'url("../src/assets/arrow.svg")',
+        'socialmedia-github':'url("../logo-github.svg")',
+        'socialmedia-github-light':'url("../logo-github-light.svg")',
+        'socialmedia-linkedin':'url("../logo-linkedin.svg")',
+        'socialmedia-linkedin-light':'url("../logo-linkedin-light.svg")',
+        'socialmedia-mail':'url("../logo-mail.svg")',
+        'socialmedia-mail-light':'url("../logo-mail-light.svg")',
+        'goto-box':'url("../goto.svg")',
+        'scroll-arrow':'url("../arrow.svg")',
         'main-pattern':'linear-gradient(45deg, #C06C84, #6C5B7B, #355C7D)',
         'rainbow-text-gradient':'linear-gradient(141deg,#E1EEF4,#28abe1 15%,#ff729f 50%,#f18f01 85%)',
         'dark-text-gradient':'linear-gradient(141deg, #969699, #1e1e22)',
@@ -95,3 +94,4 @@ module.exports = {
     })
   ],
 }
+

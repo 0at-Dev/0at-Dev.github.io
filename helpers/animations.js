@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded",e=>{
+import { gsap } from "gsap";
+import { Flip, ScrollTrigger } from "gsap/all";
+import SplitType from "split-type";
+    
+ const animate=()=>{
     const scrollAnchorSplitText=new SplitType('.scroll-anchor', { types: 'chars' })
     const workSectionSplitText=new SplitType('.work-section-title', { types: 'chars' })
     const aboutSectionSplitText=new SplitType('.about-section-title ', { types: 'chars' })
     const scrollAnchorTextChars=scrollAnchorSplitText.chars
     const workSectionTitleTextChars=workSectionSplitText.chars
     const aboutSectionTitleTextChars=aboutSectionSplitText.chars
-
 // Plugins 
 gsap.registerPlugin(Flip)
 gsap.registerPlugin(ScrollTrigger)
@@ -29,15 +32,16 @@ const ACTIVE_ANCHOR_UNDERLINE=document.querySelector(".active-anchor-underline")
     })
 
 //-- Show nav 
-TweenMax.staggerFrom("#NavList>li", 1, {
+gsap.from("#NavList>li", 1, {
     opacity: 0,
     x: -20,
-    ease: Power3.easeInOut,
-    delay:0.5
-}, 0.08)
+    ease: "power3.InOut",
+    delay:0.5,
+    stagger:0.08
+})
 
 if(window.matchMedia('(max-width:601px)')){
-    TweenMax.from("label[for='MobileNav']", 1, {
+    gsap.from("label[for='MobileNav']", 1, {
         scale: 0,
         ease:"elastic.out(1, 0.3)",
         delay:0.5
@@ -47,32 +51,34 @@ if(window.matchMedia('(max-width:601px)')){
 }
 
 //-- Show contacts 
-TweenMax.from("#ContactList>li", 1, {
+gsap.from("#ContactList>li", 1, {
     opacity: 0,
-    ease: Power3.easeInOut,
+    ease: "power3.InOut",
     delay:0.5
 })
 
 //-- Show Title  and subtitle
-TweenMax.staggerFrom("#Introduction>#IntroductionTitleContainer, #Introduction>#IntroductionSubtitleContainer, #Introduction>#IntroductionBlobsContainer", 1, {
+gsap.from("#Introduction>#IntroductionTitleContainer, #Introduction>#IntroductionSubtitleContainer, #Introduction>#IntroductionBlobsContainer", 1, {
     opacity: 0,
-    ease: Power3.easeInOut
-}, .3)
+    stagger:.3,
+    ease: "power3.InOut"
+})
 
 //-- Show contact button
-TweenMax.from("#IntroductionContactLabel", {
+gsap.from("#IntroductionContactLabel", {
     x: -20,
     opacity: 0,
-    ease: Power3.easeInOut,
+    ease: "power3.InOut",
     delay:0.1
 })
 
-TweenMax.staggerFrom("#IntroductionContactDarkBubble, #IntroductionContactSemiBubble, #IntroductionContactLightBubble", 1, {
+gsap.from("#IntroductionContactDarkBubble, #IntroductionContactSemiBubble, #IntroductionContactLightBubble", 1, {
     opacity: 0,
     x: -20,
-    ease: Power3.easeInOut,
+    stagger:.3,
+    ease: "power3.InOut",
     delay:0.1
-}, .3)
+})
 
 //-- Show scroll button
 if(window.matchMedia('(min-width:601px)')){
@@ -82,28 +88,29 @@ if(window.matchMedia('(min-width:601px)')){
     let charsRevealDuration=charsLength * charsRevealDelay
     let scrollArrowRevealDelay=charsRevealDuration + 0.08
     
-    TweenMax.staggerFrom(scrollAnchorTextChars,1,{
+    gsap.from(scrollAnchorTextChars,1,{
         opacity: 0,
         x: -20,
-        ease: Power3.easeInOut,
-    }, charsRevealDelay)
+        stagger:charsRevealDelay,
+        ease: "power3.InOut",
+    })
     
-    TweenMax.from("#IntroductionScrollButton>svg",{
+    gsap.from("#IntroductionScrollButton>svg",{
         opacity: 0,
         y: -20,
-        ease: Power3.easeInOut,
+        ease: "power3.InOut",
         delay:scrollArrowRevealDelay
     })
 }
 
-// Scroll Animations
+// // Scroll Animations
 
 //-- show "Work" section title
-TweenMax.from(workSectionTitleTextChars, 1,{
+gsap.from(workSectionTitleTextChars, 1,{
     stagger:.05,
     scrollTrigger:".work-section-title",
     y: 100,
-    ease: Power3.easeInOut,
+    ease: "power3.InOut",
 })
 
 //-- show "Work" section items
@@ -114,16 +121,16 @@ document.querySelectorAll("#Work .work-section-workitem").forEach(item=>{
     let $imageContainers=$images.querySelectorAll("span")
     
     // --  show item description
-    TweenMax.from($texts, 1,{
+    gsap.from($texts, 1,{
         scrollTrigger:$description,
         stagger:.3,
         opacity: 0,
         x: -20,
-        ease: Power3.easeInOut,
+        ease: "power3.InOut",
     })
     
     // --  show item images
-    TweenMax.from($imageContainers, 1,{
+    gsap.from($imageContainers, 1,{
         scrollTrigger:$images,
         stagger:.3,
         scale: 0,
@@ -133,51 +140,23 @@ document.querySelectorAll("#Work .work-section-workitem").forEach(item=>{
 })
 
 //-- show "About" section title
-TweenMax.from(aboutSectionTitleTextChars, 1,{
+gsap.from(aboutSectionTitleTextChars, 1,{
     stagger:.05,
     scrollTrigger:".about-section-title ",
     y: 100,
-    ease: Power3.easeInOut,
+    ease: "power3.InOut",
 })
 
 
-// --  show "About" section items
-TweenMax.from("#About .about-section-aboutitem", 1,{
+// // --  show "About" section items
+gsap.from("#About .about-section-aboutitem", 1,{
     scrollTrigger:"#About .about-section-aboutitem",
     stagger:.3,
     scale: 0,
     ease:"elastic.out(1, 0.3)",
     delay:0.5
 })
+    
+}
 
-
-
-
-//-- hide nav
-    // TweenMax.fromTo(".main-nav, .contact-nav", 
-    // {scale: 1}, 
-    // {scale: 0, scrollTrigger:{
-    //     trigger:"#Introduction",
-    //     start:"bottom center",
-        
-
-    // },duration: .5})
-
-    // TweenMax.from(".main-nav",1 ,{
-    //     scrolltrigger:{
-
-    //     }
-    // })
-
-
-    // Listener
-    // window.addEventListener("scroll",e=>{
-    //     let $header=document.querySelector("header")
-    //     let $introductionSection=document.getElementById("Introduction")
-    //     let _introductionSectionHeight=$introductionSection.getBoundingClientRect().height
-    //     let _scrolledY=window.scrollY
-
-    //         $header.classList.toggle("scrolled-nav", _scrolledY > _introductionSectionHeight )
-    // })
-  
-})
+export default animate
