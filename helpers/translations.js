@@ -24,6 +24,11 @@ const TRANSLATION={
                         description:"Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Además, permite marcar como vista y guardar un comentario de forma local y exportarlo en un archivo .txt.",
                         siteAnchor:"Ir al sitio"
                     },
+                    reminder:{
+                        title:"reminder",
+                        description:"aplicación de lista de tareas con interfaz sencilla animada con Framer motion",
+                        siteAnchor:"Ir al sitio"
+                    },
                     logs:{
                         title:"logs keeper",
                         description:"Registro local de credenciales que pueden ser exportadas en un .txt y además validadas en la misma interfaz.",
@@ -76,6 +81,11 @@ const TRANSLATION={
                         description:"Movie search engine that consumes the themoviedb API, from which I retrieve data about upcoming movies or movies that the user specifically searches for. Additionally, it allows marking movies as watched and saving a comment locally, with the ability to export it to a .txt file.",
                         siteAnchor:"Go to live site"
                     },
+                    reminder:{
+                        title:"reminder",
+                        description:"Simple and animated to-do list application with Framer Motion.",
+                        siteAnchor:"Go to live site"
+                    },
                     logs:{
                         title:"logs keeper",
                         description:"Local credentials registry that can be exported to a .txt file and also validated within the same interface.",
@@ -101,8 +111,6 @@ const TRANSLATION={
             }
         }
     }
-
-
 }
 let $languageCheckbox=document.getElementById("Language")
 
