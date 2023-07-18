@@ -38,7 +38,14 @@ const TRANSLATION={
                         title:"planner",
                         description:"Herramienta dedicada a usuarios que se desempeñan en la creación de contenido para redes sociales. Esta app organiza y guarda contenido, maneja múltiples tipos de usuario y brinda una interfaz para que los usuarios puedan mostrar el cronograma de contenido a sus clientes.",
                         siteAnchor:"Ir al sitio"
+                    },
+                    decomarmol:{
+                        title:"decomarmol",
+                        description:"Página web con CMS personalizado para una empresa de venta de mármoles, granitos, entre otros. Cuenta con una galeria, catálogo de productos y FAQs, cuyo contenido puede ser fácilmente gestionado a través del CMS.",
+                        siteAnchor:"Ir al sitio"
+                        
                     }
+
                 }
             },
             about:{
@@ -95,6 +102,12 @@ const TRANSLATION={
                         title:"planner",
                         description:"Tool dedicated to users engaged in content creation for social media. This app organizes and saves content, handles multiple user types, and provides an interface for users to showcase their content schedule to their clients.",
                         siteAnchor:"Go to live site"
+                    },
+                    decomarmol:{
+                        title:"decomarmol",
+                        description:"Website with custom CMS for a company specialized in the sale of marble, granite and other related products. The website has a gallery, a product catalog and a frequently asked questions section, with easily manageable content through the CMS.",
+                        siteAnchor:"Go to live site"
+                        
                     }
                 }
             },
