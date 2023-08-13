@@ -56,7 +56,7 @@ const TRANSLATION={
                         rest:"He tenido la oportunidad de trabajar en equipo y tomar decisiones clave en diversos proyectos, que van desde aplicaiones enteras, webs sencillas y desarrollo con Wordpress"
                     },
                     second:"Entre mis habilidades destacan tecnologías fundamentales en el desarrollo web como lo son HTML, CSS y JavaScript. Además, cuento con experiencia en el uso de Tailwind CSS y React JS",
-                    third:"Actualmente estoy aprendiendo: TypeScript, bases de datos y testing"
+                    third:"Actualmente estoy aprendiendo: bases de datos y testing"
                 }
             }
             
@@ -119,7 +119,7 @@ const TRANSLATION={
                         rest:"I have had the opportunity to work as a team and make key decisions in various projects, ranging from complete applications to simple websites and WordPress development"
                     },
                     second:"Among my skills, I excel in fundamental web development technologies such as HTML, CSS, and JavaScript. Additionally, I have experience in using Tailwind CSS and React JS",
-                    third:"Currently, I am learning TypeScript, databases, and testing"
+                    third:"Currently, I am learning databases and testing"
                 }
             }
         }
