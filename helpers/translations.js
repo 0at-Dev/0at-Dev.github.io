@@ -19,6 +19,11 @@ const TRANSLATION={
             work:{
                 title:"Mi trabajo",
                 projects:{
+                    encuestas:{
+                        title:"encuestas bechic",
+                        description:"El proyecto 'Encuestas Bechic' consiste en una app que se enfoca en la recopilación de respuestas de usuarios anónimos en encuestas activas, en colaboración con la empresa Bechic, especializada en la venta de accesorios para teléfonos celulares. Además, integra un completo panel de control administrativo para gestionar y visualizar las respuestas recopiladas de manera eficiente.",
+                        siteAnchor:"Ir al sitio"
+                    },
                     cinemaniac:{
                         title:"cinemaniac",
                         description:"Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Además, permite marcar como vista y guardar un comentario de forma local y exportarlo en un archivo .txt.",
@@ -83,6 +88,11 @@ const TRANSLATION={
             work:{
                 title:"My work",
                 projects:{
+                    encuestas:{
+                        title:"bechic surveys",
+                        description:"The 'Bechic Surveys' project consists of an app that focuses on collecting responses from anonymous users in active surveys, in collaboration with Bechic, a company specialized in the sale of accessories for mobile phones. Additionally, it integrates a comprehensive administrative control panel to efficiently manage and view the collected responses.",
+                        siteAnchor:"Go to live site"
+                    },
                     cinemaniac:{
                         title:"cinemaniac",
                         description:"Movie search engine that consumes the themoviedb API, from which I retrieve data about upcoming movies or movies that the user specifically searches for. Additionally, it allows marking movies as watched and saving a comment locally, with the ability to export it to a .txt file.",
@@ -165,10 +175,13 @@ const translate=()=>{
                 $work.querySelector(".work-section-title").textContent=_checked?TRANSLATION.ES.sections.work.title:TRANSLATION.EN.sections.work.title
                 $work.querySelectorAll("div>ul>li").forEach(item=>{
                     let _workData=item.getAttribute("data-work-key")
+                    let $title=item.querySelectorAll(".work-section-workitem-description>p")[0]
                     let $description=item.querySelectorAll(".work-section-workitem-description>p")[1]
                     let $siteAnchorText=item.querySelector(".work-section-workitem-description>a>span")
 
                     if(_workData){
+                        $title.textContent=_checked?TRANSLATION.ES.sections.work.projects[_workData].title:TRANSLATION.EN.sections.work.projects[_workData].title
+
                         $description.textContent=_checked?TRANSLATION.ES.sections.work.projects[_workData].description:TRANSLATION.EN.sections.work.projects[_workData].description
 
                         $siteAnchorText.textContent=_checked?TRANSLATION.ES.sections.work.projects[_workData].siteAnchor:TRANSLATION.EN.sections.work.projects[_workData].siteAnchor
