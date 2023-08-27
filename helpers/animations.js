@@ -116,7 +116,7 @@ gsap.from(workSectionTitleTextChars, 1,{
 //-- show "Work" section items
 document.querySelectorAll("#Work .work-section-workitem").forEach(item=>{
     let $description= item.querySelector(".work-section-workitem-description")
-    let $texts=$description.querySelectorAll("p, a")
+    let $texts=$description.querySelectorAll("p, a, ul")
     let $images=item.querySelector(".work-section-workitem-images")
     let $imageContainers=$images.querySelectorAll("span")
     
