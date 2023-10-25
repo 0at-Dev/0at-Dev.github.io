@@ -26,7 +26,7 @@ const TRANSLATION={
                     },
                     cinemaniac:{
                         title:"cinemaniac",
-                        description:"Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Además, permite marcar como vista y guardar un comentario de forma local y exportarlo en un archivo .txt.",
+                        description:"Buscador de peliculas que consume la API de themoviedb de la cual obtengo datos sobre películas por estrenar o que el usuario busque particularmente. Además, permite guardar las peliculas favoritas del usuario de forma local o a través de una cuenta registrada.",
                         siteAnchor:"Ir al sitio"
                     },
                     reminder:{
@@ -95,7 +95,7 @@ const TRANSLATION={
                     },
                     cinemaniac:{
                         title:"cinemaniac",
-                        description:"Movie search engine that consumes the themoviedb API, from which I retrieve data about upcoming movies or movies that the user specifically searches for. Additionally, it allows marking movies as watched and saving a comment locally, with the ability to export it to a .txt file.",
+                        description:"A movie finder that consumes themoviedb API, from which I obtain data about upcoming movies or those that the user specifically searches for. It also allows the user to save their favorite movies locally or through a registered account.",
                         siteAnchor:"Go to live site"
                     },
                     reminder:{
