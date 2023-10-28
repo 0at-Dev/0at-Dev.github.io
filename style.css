@@ -27,23 +27,12 @@
     100%{background-position: right;}
   }
   
-
   html {
     @apply min-h-full scroll-smooth;
   }
   body {
     @apply min-h-screen ;
   }
-
-  /* #Introduction{ 
-    background:#111827 ;
-    background: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
-    background-size: 400%;
-    will-change: background-position;
-    animation: fluid-gradient 5s infinite alternate;
-  } */
-
-
 
   .gradient-text::before{
     display: flex;
@@ -70,7 +59,6 @@
     background-color: transparent;
     background-image: linear-gradient(90deg,#28abe1 15%,#ff729f 50%,#f18f01 85%);
   }
-
 
   .gradient-bg-empty-effect>.gradient-bg-empty-effect-icon{
     background-color: transparent;
@@ -125,17 +113,59 @@
   #Project1:checked ~ #Work>div{
     @apply opacity-100
   }
-/*    
- .scrolled-nav{
-    @apply [&>.main-nav]:hidden [&>.contact-nav]:scale-0 [&>label]:flex [&>.main-nav]:z-30 [&>.main-nav]:shadow [&>.main-nav]:bg-white [&>.main-nav]:fixed [&>.main-nav]:w-full [&>.main-nav]:h-[100vh] [&>.main-nav]:-right-[100%] [&>.main-nav]:peer-checked:right-[0%] [&>.main-nav]:peer-checked:[&>ul]:opacity-100 [&>.main-nav]:peer-checked:[&>div]:flex [&>.main-nav]:transition-[transform,right] [&>.main-nav]:duration-300 [&>.main-nav]:ease-in
- } */
-  
-  /* Split Text library custom styles  */
-    /* .work-section-title{
-      overflow-y: hidden;
-    } */
 
+  /* Nuevas clases */
 
+  .main-nav-toggler{
+    @apply fixed left-[5%] z-30 my-[2vh] w-[3.3em] h-[3.3em] flex items-center justify-center transition-[opacity,background-color] duration-200 ease-in-out peer-checked:z-40 peer-checked:[&>span]:bg-transparent peer-checked:[&>span]:-right-2 peer-checked:[&>span]:before:rotate-45 peer-checked:[&>span]:before:translate-x-[0em] peer-checked:[&>span]:before:translate-y-[0em] peer-checked:[&>span]:after:-rotate-45 peer-checked:[&>span]:after:-translate-x-[.05em] peer-checked:[&>span]:after:-translate-y-[.01em] tablet:w-[6.6em] tablet:h-[6.6em] tablet:justify-normal desktop:w-[2.4em] desktop:h-[2.4em] desktop:cursor-pointer
+  }
+
+  .main-nav-toggler>.main-nav-toggler-burguer{
+    @apply 
+    bg-dark 
+    rounded-full 
+    transition-colors 
+    duration-200 
+    ease-in-out 
+    before:transition-transform 
+    before:duration-200 
+    before:ease-in-out 
+    before:absolute 
+    before:bg-dark 
+    before:rounded-full 
+    before:-translate-y-[.4em] 
+    after:transition-transform 
+    after:duration-200 
+    after:ease-in-out 
+    after:absolute 
+    after:bg-dark 
+    after:rounded-full 
+    after:translate-y-[.4em]
+
+    w-[1.5em] 
+    h-[.15em] 
+    before:w-[1.5em] 
+    before:h-[.15em] 
+    after:w-[1.5em] 
+    after:h-[.15em] 
+
+    tablet:my-[1.2em]
+    tablet:before:my-[1.2em]
+    tablet:after:my-[1.2em]
+    tablet:w-[3.6em] 
+    tablet:h-[.4em] 
+    tablet:before:w-[3.6em] 
+    tablet:before:h-[.4em] 
+    tablet:after:w-[3.6em] 
+    tablet:after:h-[.4em] 
+
+    desktop:w-[1.5em] 
+    desktop:h-[.15em] 
+    desktop:before:w-[1.5em] 
+    desktop:before:h-[.15em] 
+    desktop:after:w-[1.5em] 
+    desktop:after:h-[.15em] 
+  }
 
 
   @media only screen and (min-width:601px){
