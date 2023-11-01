@@ -117,7 +117,7 @@
   /* Nuevas clases */
 
   .main-nav-toggler{
-    @apply fixed left-[5%] z-30 my-[2vh] w-[3.3em] h-[3.3em] flex items-center justify-center transition-[opacity,background-color] duration-200 ease-in-out peer-checked:z-40 peer-checked:[&>span]:bg-transparent peer-checked:[&>span]:-right-2 peer-checked:[&>span]:before:rotate-45 peer-checked:[&>span]:before:translate-x-[0em] peer-checked:[&>span]:before:translate-y-[0em] peer-checked:[&>span]:after:-rotate-45 peer-checked:[&>span]:after:-translate-x-[.05em] peer-checked:[&>span]:after:-translate-y-[.01em] tablet:w-[6.6em] tablet:h-[6.6em] tablet:justify-normal desktop:w-[2.4em] desktop:h-[2.4em] desktop:cursor-pointer
+    @apply fixed left-[5%] z-40 my-[2vh] w-[3.3em] h-[3.3em] flex items-center justify-center transition-[opacity,background-color] duration-200 ease-in-out peer-checked:z-50 peer-checked:[&>span]:bg-transparent peer-checked:[&>span]:-right-2 peer-checked:[&>span]:before:rotate-45 peer-checked:[&>span]:before:translate-x-[0em] peer-checked:[&>span]:before:translate-y-[0em] peer-checked:[&>span]:after:-rotate-45 peer-checked:[&>span]:after:-translate-x-[.05em] peer-checked:[&>span]:after:-translate-y-[.01em] tablet:w-[6.6em] tablet:h-[6.6em] tablet:justify-normal desktop:w-[2.4em] desktop:h-[2.4em] desktop:cursor-pointer
   }
 
   .main-nav-toggler>.main-nav-toggler-burguer{
