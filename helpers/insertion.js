@@ -12,8 +12,8 @@ const insert=()=>{
     // let $draggableNode=document.importNode($draggableTemplate.content, true)
     
 
-    PROJECTS.map(el=>{
-        let {id, name, description,tech_media}=el
+    PROJECTS.reverse().map(el=>{
+        let {id, name, description,tech_media,site}=el
 
         let $clone=document.importNode($projectTemplate.content, true)
 
@@ -21,8 +21,15 @@ const insert=()=>{
         let $name=$clone.querySelector("p[project-name='']")
         let $description=$clone.querySelector("p[project-description='']")
         let $techstack=$clone.querySelector("ul[project-techstack='']")
+        let $sitelink=$clone.querySelector("a[project-site-link='']")
 
-        tech_media.map(tech=>{
+        $item.setAttribute("project-key",id)
+
+        $name.textContent=name
+        $description.textContent=description
+        $sitelink.href=site
+
+        tech_media.reverse().map(tech=>{
             let {logo, name:techname}=tech
             let $techstackItemTemplate=$techstack.querySelector("template[template-name='project-techstack-list-item']")
             let $techstackItemClone=document.importNode($techstackItemTemplate.content,true)
@@ -36,19 +43,11 @@ const insert=()=>{
                     $techstack.appendChild($techstackItemClone)
 
         })
-            $item.setAttribute("project-key",id)
-
-            $name.textContent=name
-            $description.textContent=description
-            
                       
            $projectsFragment.appendChild($item)
     })
 
     $projectsContainer.appendChild($projectsFragment)
-
-    // console.log($projectNode)
-    // console.log($draggableNode)
 
 }
 
