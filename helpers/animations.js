@@ -9,15 +9,31 @@ import SplitType from "split-type";
     // const scrollAnchorTextChars=scrollAnchorSplitText.chars
     // const workSectionTitleTextChars=workSectionSplitText.chars
     // const aboutSectionTitleTextChars=aboutSectionSplitText.chars
+
+    // const scrollAnchorSplitText=new SplitType('a[href="#Projects"]', { types: 'chars'})
+    const $scrollAnchorEl=document.querySelector('a[href="#Projects"] div')
+    const scrollAnchorTextContent=$scrollAnchorEl.textContent
+    const scrollAnchorChars=scrollAnchorTextContent.split('')
+
 // Plugins 
 gsap.registerPlugin(Flip)
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(Draggable)
 
 // Draggable elements animation
-Draggable.create("#DraggableExample,#DraggableExample2",{
-    type:"x,y",
-    bounds:document.getElementById("Draggables")
+// Draggable.create("#DraggableExample,#DraggableExample2",{
+//     type:"x,y",
+//     bounds:document.getElementById("Draggables")
+// })
+
+// Scroll anchor animation
+$scrollAnchorEl.textContent=''
+scrollAnchorChars.forEach((char,index)=>{
+    let $span=document.createElement("span")
+        $span.style.transform=`rotate(${index * 13.5}deg)`
+        $span.textContent=char
+
+    $scrollAnchorEl.appendChild($span)
 })
 
 //First load Animations

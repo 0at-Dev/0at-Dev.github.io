@@ -31,7 +31,15 @@
     @apply min-h-full scroll-smooth;
   }
   body {
-    @apply min-h-screen ;
+    @apply min-h-screen;
+  }
+
+  main{
+    scroll-snap-type: mandatory y;
+  }
+
+  main section{
+    scroll-snap-align: center;
   }
 
   .gradient-text::before{
@@ -166,7 +174,26 @@
     desktop:after:w-[1.5em] 
     desktop:after:h-[.15em] 
   }
+  /* Scroll */
+  
+  /* Swiper */
+    /* .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    } */
 
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 10em;
+      height: 10em;
+    }
+  /* 
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    } */
 
   @media only screen and (min-width:601px){
       html{

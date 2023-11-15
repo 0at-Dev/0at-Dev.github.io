@@ -73,7 +73,8 @@ export default {
         'fluid-gradient':'fluid-gradient 5s infinite alternate',
         'fade':'fade 500ms linear forwards var(--delay)',
         'img-appear':'img-appear 1s linear forwards 2.4s',
-        'rev-img':'rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards 2s'
+        'rev-img':'rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards 2s',
+        'spin-slow':'spin 3s linear infinite'
       }
     },
   },
