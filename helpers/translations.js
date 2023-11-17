@@ -14,7 +14,9 @@ const TRANSLATION={
                 title:"",
                 subtitle:"Desarrollador Front-End",
                 contactAnchor:"Contáctame!",
-                scrollAnchor:"Desplazate hacia abajo"
+                scrollAnchor:"Desplazate hacia abajo",
+                resumeAnchor:"Descargar resumen",
+                resumeLink:"https://drive.google.com/file/d/1n3yFiEFKRW_CAHvBq4Zt93mZc5PjyJ3z/view?usp=drive_link"
             },
             work:{
                 title:"Mi trabajo",
@@ -83,7 +85,9 @@ const TRANSLATION={
                 title:"",
                 subtitle:"Front-End Developer",
                 contactAnchor:"Get in touch!",
-                scrollAnchor:"Scroll down"
+                scrollAnchor:"Scroll down",
+                resumeAnchor:"Download resume",
+                resumeLink:"https://drive.google.com/file/d/1nlo7HC02gqM8ZGUw7ec_mXcsH0dlyntZ/view?usp=drive_link"
             },
             work:{
                 title:"My work",
@@ -168,7 +172,8 @@ const translate=()=>{
 
                 // Introduction
                 $introduction.querySelector("#Introduction>#IntroductionSubtitleContainer>h1").textContent=_checked?TRANSLATION.ES.sections.introduction.subtitle:TRANSLATION.EN.sections.introduction.subtitle //Subtitle
-                $introduction.querySelector("#Introduction>#IntroductionContactButton>span").textContent=_checked?TRANSLATION.ES.sections.introduction.contactAnchor:TRANSLATION.EN.sections.introduction.contactAnchor //Get in touch
+                $introduction.querySelector("#Introduction>#IntroductionDownloadResumeButton").href=_checked?TRANSLATION.ES.sections.introduction.resumeLink:TRANSLATION.EN.sections.introduction.resumeLink //Resume Link
+                $introduction.querySelector("#Introduction>#IntroductionDownloadResumeButton>span").textContent=_checked?TRANSLATION.ES.sections.introduction.resumeAnchor:TRANSLATION.EN.sections.introduction.resumeAnchor //Download resume
                 $introduction.querySelector("#Introduction>#IntroductionScrollButton>span").textContent=_checked?TRANSLATION.ES.sections.introduction.scrollAnchor:TRANSLATION.EN.sections.introduction.scrollAnchor //Scroll down
 
                 // Work

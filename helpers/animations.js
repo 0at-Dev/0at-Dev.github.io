@@ -65,20 +65,20 @@ gsap.from("#Introduction>#IntroductionTitleContainer, #Introduction>#Introductio
 })
 
 //-- Show contact button
-gsap.from("#IntroductionContactLabel", {
-    x: -20,
-    opacity: 0,
-    ease: "power3.InOut",
-    delay:0.1
-})
+// gsap.from("#IntroductionContactLabel", {
+//     x: -20,
+//     opacity: 0,
+//     ease: "power3.InOut",
+//     delay:0.1
+// })
 
-gsap.from("#IntroductionContactDarkBubble, #IntroductionContactSemiBubble, #IntroductionContactLightBubble", 1, {
-    opacity: 0,
-    x: -20,
-    stagger:.3,
-    ease: "power3.InOut",
-    delay:0.1
-})
+// gsap.from("#IntroductionContactDarkBubble, #IntroductionContactSemiBubble, #IntroductionContactLightBubble", 1, {
+//     opacity: 0,
+//     x: -20,
+//     stagger:.3,
+//     ease: "power3.InOut",
+//     delay:0.1
+// })
 
 //-- Show scroll button
 if(window.matchMedia('(min-width:601px)')){
