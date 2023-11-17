@@ -14,6 +14,7 @@ const swiperSlider=()=>{
             translate: ["-20%", 0, -1],
           },
           next: {
+            shadow: true,
             translate: ["100%", 0, 0],
           },
         },

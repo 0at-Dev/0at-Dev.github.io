@@ -10,7 +10,8 @@ const PROJECTS=[
         media:[`${WORK_PATH}/decomarmol_home_desktop.PNG`,`${WORK_PATH}/decomarmol_home_extra_desktop.PNG`,`${WORK_PATH}/decomarmol_home_mobile.PNG`],
         tech_media:[TECH_STACK.javascript,TECH_STACK.css,TECH_STACK.html],
         site:"https://decomarmolvzla.com/",
-        github_repo:""
+        github_repo:"",
+        highlighted:false
 
     },
     {
@@ -20,7 +21,8 @@ const PROJECTS=[
         media:[`${WORK_PATH}/planner_home_desktop.PNG`,`${WORK_PATH}/planner_login_desktop.PNG`,`${WORK_PATH}/planner_inspect_mobile.PNG`],
         tech_media:[TECH_STACK.javascript,TECH_STACK.css,TECH_STACK.html],
         site:"https://planner.iniciaapp.com/",
-        github_repo:""
+        github_repo:"",
+        highlighted:true
 
     },
     {
@@ -30,17 +32,19 @@ const PROJECTS=[
         media:[`${WORK_PATH}/reminder_desktop.PNG`,`${WORK_PATH}/reminder_desktop.PNG`,`${WORK_PATH}/reminder_mobile.PNG`],
         tech_media:[TECH_STACK.framermotion,TECH_STACK.reactjs,TECH_STACK.tailwindcss],
         site:"https://oat-reminder.netlify.app/",
-        github_repo:""
+        github_repo:"",
+        highlighted:false
 
     },
     {
         id:"cinemaniac",
         name:"cinemaniac",
         description:"A movie finder that consumes themoviedb API, from which I obtain data about upcoming movies or those that the user specifically searches for. It also allows the user to save their favorite movies locally or through a registered account.",
-        media:[`${WORK_PATH}/cinemaniac_hero_mobile.PNG`,`${WORK_PATH}/cinemaniac_details_desktop.PNG`,`${WORK_PATH}/cinemaniac_search_desktop.PNG`],
+        media:[`${WORK_PATH}/cinemaniac_search_desktop.PNG`,`${WORK_PATH}/cinemaniac_hero_mobile.PNG`,`${WORK_PATH}/cinemaniac_details_desktop.PNG`],
         tech_media:[TECH_STACK.mongodb,TECH_STACK.nodejs,TECH_STACK.framermotion,TECH_STACK.reactjs,TECH_STACK.tailwindcss],
         site:"https://oat-cinemaniac.netlify.app/",
-        github_repo:""
+        github_repo:"",
+        highlighted:true
 
     },
     {
@@ -50,10 +54,16 @@ const PROJECTS=[
         media:[`${WORK_PATH}/encuestas-bechic_desktop.PNG`,`${WORK_PATH}/encuestas-bechic_mobile`],
         tech_media:[TECH_STACK.aws,TECH_STACK.postgresql,TECH_STACK.nodejs,TECH_STACK.framermotion,TECH_STACK.reactjs,TECH_STACK.tailwindcss],
         site:"https://encuestas.bechicvzla.com/",
-        github_repo:""
+        github_repo:"",
+        highlighted:true
 
     }
 
 ]
 
+export const highlighted=()=>{
+    const HIGHLIGHTED=PROJECTS.filter(project=>project.highlighted===true)
+
+    return HIGHLIGHTED
+}   
 export default PROJECTS

@@ -1,5 +1,9 @@
 import { gsap } from "gsap";
-import { Flip, ScrollTrigger, Draggable } from "gsap/all";
+import { 
+    Flip, 
+    ScrollTrigger,
+    Draggable 
+} from "gsap/all";
 import SplitType from "split-type";
     
  const animate=()=>{
@@ -35,6 +39,7 @@ scrollAnchorChars.forEach((char,index)=>{
 
     $scrollAnchorEl.appendChild($span)
 })
+
 
 //First load Animations
 
