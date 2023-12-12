@@ -27,7 +27,14 @@
     100%{background-position: right;}
   }
 
- 
+  .mesh-gradient{
+    
+    background-color: rgb(245, 245, 245);
+    background-image: radial-gradient(at 100% 48%, rgb(251, 146, 60) 0, transparent 37%), radial-gradient(at 74% 13%, rgb(253, 186, 116) 0, transparent 38%), radial-gradient(at 7% 81%, rgb(125, 211, 252) 0, transparent 53%), radial-gradient(at 87% 80%, rgb(186, 230, 253) 0, transparent 34%), radial-gradient(at 15% 16%, rgb(248, 113, 113) 0, transparent 37%), radial-gradient(at 34% 46%, rgb(252, 165, 165) 0, transparent 40%);
+  
+  }
+
+
   html {
     @apply min-h-full scroll-smooth;
   }
