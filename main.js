@@ -4,6 +4,6 @@ import './style.css'
 
 
 document.addEventListener("DOMContentLoaded",e=>{
-    translate()
+    // translate()
     animate()
 })

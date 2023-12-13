@@ -36,11 +36,11 @@ const TRANSLATION={
                         description:"aplicación de lista de tareas con interfaz sencilla animada con Framer motion",
                         siteAnchor:"Ir al sitio"
                     },
-                    logs:{
-                        title:"logs keeper",
-                        description:"Registro local de credenciales que pueden ser exportadas en un .txt y además validadas en la misma interfaz.",
-                        siteAnchor:"Ir al sitio"
-                    },
+                    // logs:{
+                    //     title:"logs keeper",
+                    //     description:"Registro local de credenciales que pueden ser exportadas en un .txt y además validadas en la misma interfaz.",
+                    //     siteAnchor:"Ir al sitio"
+                    // },
                     planner:{
                         title:"planner",
                         description:"Herramienta dedicada a usuarios que se desempeñan en la creación de contenido para redes sociales. Esta app organiza y guarda contenido, maneja múltiples tipos de usuario y brinda una interfaz para que los usuarios puedan mostrar el cronograma de contenido a sus clientes.",
@@ -107,11 +107,11 @@ const TRANSLATION={
                         description:"Simple and animated to-do list application with Framer Motion.",
                         siteAnchor:"Go to live site"
                     },
-                    logs:{
-                        title:"logs keeper",
-                        description:"Local credentials registry that can be exported to a .txt file and also validated within the same interface.",
-                        siteAnchor:"Go to live site"
-                    },
+                    // logs:{
+                    //     title:"logs keeper",
+                    //     description:"Local credentials registry that can be exported to a .txt file and also validated within the same interface.",
+                    //     siteAnchor:"Go to live site"
+                    // },
                     planner:{
                         title:"planner",
                         description:"Tool dedicated to users engaged in content creation for social media. This app organizes and saves content, handles multiple user types, and provides an interface for users to showcase their content schedule to their clients.",

@@ -16,20 +16,33 @@ gsap.registerPlugin(ScrollTrigger)
 //First load Animations
 
 //-- Active nav underline
-const NAV_ANCHORS=document.querySelectorAll("#NavList>li:not(:last-child)")
+const SECTIONS_TO_OBSERVE=document.querySelectorAll("main>section#Introduction, main>section#Work, main>section#About ")
 const ACTIVE_ANCHOR_UNDERLINE=document.querySelector(".active-anchor-underline")
 
-    NAV_ANCHORS.forEach(anchor=>{
-        anchor.addEventListener("click",e=>{
-            const INTIAL_STATE=Flip.getState(ACTIVE_ANCHOR_UNDERLINE)
-            anchor.appendChild(ACTIVE_ANCHOR_UNDERLINE)
-            Flip.from(INTIAL_STATE,{
-                duration:1.25,
-                absolute:true,
-                ease:'elastic.out(1,0.5)'
-            })
+    const OBSERVER=new IntersectionObserver(
+        (entries)=>{
+
+        entries.forEach(entry=>{
+            
+            let sectionId=entry.target.id==="Introduction"?"":entry.target.id
+            let anchor=document.querySelector(`#NavList>li>a[href="#${sectionId}"]`)
+                    if(sectionId.toLowerCase()==="work")console.log("paso por los proyectos")
+            if(anchor){
+                if(entry.isIntersecting){
+                    const INTIAL_STATE=Flip.getState(ACTIVE_ANCHOR_UNDERLINE)
+                    anchor.parentElement.appendChild(ACTIVE_ANCHOR_UNDERLINE)
+                    Flip.from(INTIAL_STATE,{
+                        duration:1.25,
+                        absolute:true,
+                        ease:'elastic.out(1, 0.75)'
+                    })
+                }
+            }
         })
-    })
+        },
+        {threshold:.5}
+    )
+    SECTIONS_TO_OBSERVE.forEach(section=>OBSERVER.observe(section))
 
 //-- Show nav 
 gsap.from("#NavList>li", 1, {
@@ -63,22 +76,6 @@ gsap.from("#Introduction>#IntroductionTitleContainer, #Introduction>#Introductio
     stagger:.3,
     ease: "power3.InOut"
 })
-
-//-- Show contact button
-// gsap.from("#IntroductionContactLabel", {
-//     x: -20,
-//     opacity: 0,
-//     ease: "power3.InOut",
-//     delay:0.1
-// })
-
-// gsap.from("#IntroductionContactDarkBubble, #IntroductionContactSemiBubble, #IntroductionContactLightBubble", 1, {
-//     opacity: 0,
-//     x: -20,
-//     stagger:.3,
-//     ease: "power3.InOut",
-//     delay:0.1
-// })
 
 //-- Show scroll button
 if(window.matchMedia('(min-width:601px)')){
@@ -118,23 +115,24 @@ document.querySelectorAll("#Work .work-section-workitem").forEach(item=>{
     let $description= item.querySelector(".work-section-workitem-description")
     let $texts=$description.querySelectorAll("p, a, ul")
     let $images=item.querySelector(".work-section-workitem-images")
-    let $imageContainers=$images.querySelectorAll("span")
+    let $thumbnail=$images.querySelector("a")
     
     // --  show item description
     gsap.from($texts, 1,{
         scrollTrigger:$description,
+        start: "top center",
         stagger:.3,
-        opacity: 0,
-        x: -20,
+        y: 20,
         ease: "power3.InOut",
+        
     })
     
     // --  show item images
-    gsap.from($imageContainers, 1,{
+    gsap.from($thumbnail, 1,{
         scrollTrigger:$images,
-        stagger:.3,
-        scale: 0,
-        ease:"elastic.out(1, 0.3)",
+        start: "top center",
+        y: 40,
+        ease:"power3.InOut",
     })
     
 })
@@ -153,7 +151,7 @@ gsap.from("#About .about-section-aboutitem", 1,{
     scrollTrigger:"#About .about-section-aboutitem",
     stagger:.3,
     scale: 0,
-    ease:"elastic.out(1, 0.3)",
+    ease:"elastic.out(1, 0.5)",
     delay:0.5
 })
     
