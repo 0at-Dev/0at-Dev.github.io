@@ -67,13 +67,29 @@ export default {
           '50%': { opacity:0.2,transform:'translateX(.1em)' },
           '100%': { opacity:1,transform:'translateX(0em)' },
         },
+        'blob-movement-1':{
+          "0%":{transform:'translate(0px,0px)'},
+          "25%":{ transform:'translate(-100px,70px)'},
+          "50%":{ transform:'translate(20px,150px)'},
+          "75%":{ transform:'translate(50px,100px)'},
+          "100%":{ transform:'translate(0px,0px)'},
+        },
+        'blob-movement-2':{
+          "0%":{transform:'translate(0px,0px)'},
+          "25%":{ transform:'translate(50px,10px)'},
+          "50%":{ transform:'translate(100px,50px)'},
+          "75%":{ transform:'translate(50px,100px)'},
+          "100%":{ transform:'translate(0px,0px)'},
+        }
 
       },
       animation:{
         'fluid-gradient':'fluid-gradient 5s infinite alternate',
         'fade':'fade 500ms linear forwards var(--delay)',
         'img-appear':'img-appear 1s linear forwards 2.4s',
-        'rev-img':'rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards 2s'
+        'rev-img':'rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards 2s',
+        // 'blob-movement-1':'blob-movement-1 10s infinite',
+        // 'blob-movement-2':'blob-movement-2 10s infinite'
       }
     },
   },
