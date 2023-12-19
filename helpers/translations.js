@@ -7,7 +7,7 @@ const TRANSLATION={
             home:"Inicio",
             work:"Proyectos",
             about:"Sobre mi",
-            language:"🌐EN"
+            language:"EN"
         },
         sections:{
             introduction:{
@@ -36,11 +36,6 @@ const TRANSLATION={
                         description:"aplicación de lista de tareas con interfaz sencilla animada con Framer motion",
                         siteAnchor:"Ir al sitio"
                     },
-                    logs:{
-                        title:"logs keeper",
-                        description:"Registro local de credenciales que pueden ser exportadas en un .txt y además validadas en la misma interfaz.",
-                        siteAnchor:"Ir al sitio"
-                    },
                     planner:{
                         title:"planner",
                         description:"Herramienta dedicada a usuarios que se desempeñan en la creación de contenido para redes sociales. Esta app organiza y guarda contenido, maneja múltiples tipos de usuario y brinda una interfaz para que los usuarios puedan mostrar el cronograma de contenido a sus clientes.",
@@ -60,7 +55,7 @@ const TRANSLATION={
                 texts:{
                     first:{
                         highlight:"más de 2 años de experiencia en el desarrollo web",
-                        rest:"He tenido la oportunidad de trabajar en equipo y tomar decisiones clave en diversos proyectos, que van desde aplicaiones enteras, webs sencillas y desarrollo con Wordpress"
+                        rest:"He tenido la oportunidad de trabajar en equipo y tomar decisiones clave en diversos proyectos como aplicaciones enteras y webs sencillas"
                     },
                     second:"Entre mis habilidades destacan tecnologías fundamentales en el desarrollo web como lo son HTML, CSS y JavaScript. Además, cuento con experiencia en el uso de Tailwind CSS y React JS",
                     third:"Actualmente estoy aprendiendo: bases de datos y testing"
@@ -78,7 +73,7 @@ const TRANSLATION={
             home:"Home",
             work:"Projects",
             about:"About me",
-            language:"🌐ES"
+            language:"ES"
         },
         sections:{
             introduction:{
@@ -107,11 +102,6 @@ const TRANSLATION={
                         description:"Simple and animated to-do list application with Framer Motion.",
                         siteAnchor:"Go to live site"
                     },
-                    logs:{
-                        title:"logs keeper",
-                        description:"Local credentials registry that can be exported to a .txt file and also validated within the same interface.",
-                        siteAnchor:"Go to live site"
-                    },
                     planner:{
                         title:"planner",
                         description:"Tool dedicated to users engaged in content creation for social media. This app organizes and saves content, handles multiple user types, and provides an interface for users to showcase their content schedule to their clients.",
@@ -130,7 +120,7 @@ const TRANSLATION={
                 texts:{
                     first:{
                         highlight:"More than 2 years of experience in web development",
-                        rest:"I have had the opportunity to work as a team and make key decisions in various projects, ranging from complete applications to simple websites and WordPress development"
+                        rest:"I have had the opportunity to work as a team and make key decisions in various projects like complete applications and simple websites"
                     },
                     second:"Among my skills, I excel in fundamental web development technologies such as HTML, CSS, and JavaScript. Additionally, I have experience in using Tailwind CSS and React JS",
                     third:"Currently, I am learning databases and testing"
@@ -146,6 +136,7 @@ const translate=()=>{
      $languageCheckbox.addEventListener("change",e=>{
         let _checked=e.target.checked
         let $label=e.target.labels[0]
+        let $currentLabelText=$label.querySelector("span")
         let $navegationSelectors=document.querySelectorAll("#NavList>li:not(:last-child)")
         
         let $introduction=document.getElementById("Introduction")
@@ -156,7 +147,13 @@ const translate=()=>{
             document.title=_checked?TRANSLATION.ES.site.title:TRANSLATION.EN.site.title
 
             // Checkbox Label
-            $label.textContent=_checked?TRANSLATION.ES.navigator.language:TRANSLATION.EN.navigator.language
+        
+            let $newLabelText=document.createElement("span")
+                $newLabelText.classList.add("font-nunito","font-bold","text-[1.5em]","text-dark","desktop:text-sm")
+                $newLabelText.textContent=_checked?TRANSLATION.ES.navigator.language:TRANSLATION.EN.navigator.language
+           
+            $label.removeChild($currentLabelText)
+            $label.appendChild($newLabelText)
 
             // Navegator
             $navegationSelectors.forEach(selector=>{
