@@ -149,7 +149,8 @@ const translate=()=>{
             // Checkbox Label
         
             let $newLabelText=document.createElement("span")
-                $newLabelText.classList.add("font-nunito","font-bold","text-[1.5em]","text-dark","desktop:text-sm")
+            
+                $newLabelText.classList.add("font-nunito", "font-bold", "text-[1.5em]", "text-dark", "tablet:text-[2em]", "desktop:text-[.9em]")
                 $newLabelText.textContent=_checked?TRANSLATION.ES.navigator.language:TRANSLATION.EN.navigator.language
            
             $label.removeChild($currentLabelText)
